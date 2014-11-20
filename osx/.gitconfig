@@ -1,0 +1,51 @@
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    ln = log --name-status
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    pl = log --pretty='format:"%h %s" --graph'
+    who = shortlog -s --
+    unstage = reset HEAD --
+    type = cat-file -t
+    dump = cat-file -p
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    last = log -1 HEAD
+    next = !bash -c 'git checkout $(git rev-list HEAD..master | tail -1)'
+    prev = checkout HEAD^1
+
+
+[color]
+        ui = auto
+
+[push]
+        default = current
+
+
+[core]
+        autocrlf = input
+        safecrlf = false
+        editor = vim
+        excludesfile = /Users/val/.gitignore_global
+
+[github]
+        user = un33k
+
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+
+[user]
+        name = Val Neekman
+        email = val@neekware.com
+
+
+
+
