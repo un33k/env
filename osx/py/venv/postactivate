@@ -1,0 +1,11 @@
+#!/bin/bash
+# This hook is run after every virtualenv is activated.
+
+THIS_HOST=$(hostname -s)
+MY_PROJ=$(basename $VIRTUAL_ENV)
+PROJ_PATH=~/Projects/workon/$THIS_HOST/$MY_PROJ
+mkdir -p $PROJ_PATH > /dev/null 2>&1
+echo "Working on: $PROJ_PATH"
+cd $PROJ_PATH
+
+
