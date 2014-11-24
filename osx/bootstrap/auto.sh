@@ -36,6 +36,5 @@ brew install libjpeg
 brew install libtiff
 brew install libpng
 
-
-
-
+#
+brew cleanup
