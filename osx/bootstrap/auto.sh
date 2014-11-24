@@ -27,5 +27,8 @@ pip install --upgrade --no-use-wheel pip setuptools virtualenv
 pip install virtualenv
 pip install virtualenvwrapper
 
+# MemCache
+brew install libmemcached
+LIBMEMCACHED=/opt/local gpip install pylibmc
 
 
