@@ -23,6 +23,7 @@ brew install nodejs
 # Install python2/3
 brew install python
 brew install python3
+export PIP_REQUIRE_VIRTUALENV=''
 pip install --upgrade --no-use-wheel pip setuptools virtualenv
 pip install virtualenv
 pip install virtualenvwrapper
@@ -38,3 +39,4 @@ brew install libpng
 
 #
 brew cleanup
+export PIP_REQUIRE_VIRTUALENV=true
