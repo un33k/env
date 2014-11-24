@@ -1,0 +1,7 @@
+1. Copy env/osx/home/* into ~/
+
+2. Install Xcode & Install command line tools
+   $ xcode-select --install
+
+3. Install latest quartz
+    @ http://xquartz.macosforge.org/landing/
