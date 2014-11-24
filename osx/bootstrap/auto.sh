@@ -31,4 +31,11 @@ pip install virtualenvwrapper
 brew install libmemcached
 LIBMEMCACHED=/opt/local gpip install pylibmc
 
+# Image Lib (required for pillow)
+brew install libjpeg
+brew install libtiff
+brew install libpng
+
+
+
 
