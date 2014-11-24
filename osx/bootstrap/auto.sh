@@ -3,7 +3,7 @@
 # Install lunchy
 sudo gem install lunchy
 
-# Install brew
+# Install brew ( # brew doctor,update,search,install,list,remove)
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 brew update
