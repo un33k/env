@@ -12,7 +12,13 @@
 		".sass-cache",
 		"tmp",
 		"generated",
-		"dist"
+		"dist",
+		"__pycache__"
+	],
+	"file_exclude_patterns":
+	[
+		"*_db",
+		".DS_Store"
 	],
 	"font_face": "Menlo",
 	"font_size": 15.0,
@@ -31,5 +37,3 @@
 	"trim_trailing_white_space_on_save": true,
 	"show_full_path": true,
 }
-
-
