@@ -1,0 +1,29 @@
+# make sure brew is installed
+
+$ brew doctor
+$ brew update
+$ brew doctor
+
+$ brew install postgres
+$ mkdir -p ~/Library/LaunchAgents
+$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+# start postgres when OSX starts
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+# ensure /usr/local/bin is on top of the file
+$ sudo vi /etc/paths
+
+# restart system
+$ sudo shutdown -r now
+
+# verify psql is on the path (/usr/local/bin/psql)
+$ which psql
+
+# create a database for your own development user
+$ createdb `whoami`
+
+# make your own development user a superuser
+sudo -u postgres createuser --superuser $USER
+
+
