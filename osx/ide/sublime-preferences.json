@@ -1,7 +1,16 @@
 {
+	"added_words":
+	[
+		"Django"
+	],
 	"auto_complete_commit_on_tab": true,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*_db",
+		".DS_Store"
+	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
@@ -13,12 +22,9 @@
 		"tmp",
 		"generated",
 		"dist",
-		"__pycache__"
-	],
-	"file_exclude_patterns":
-	[
-		"*_db",
-		".DS_Store"
+		"__pycache__",
+		"*.egg-info",
+		"build"
 	],
 	"font_face": "Menlo",
 	"font_size": 15.0,
@@ -31,9 +37,9 @@
 		120
 	],
 	"save_on_focus_lost": true,
+	"show_full_path": true,
 	"spell_check": true,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"show_full_path": true,
+	"trim_trailing_white_space_on_save": true
 }
