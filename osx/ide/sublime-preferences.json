@@ -9,7 +9,12 @@
 	"file_exclude_patterns":
 	[
 		"*_db",
-		".DS_Store"
+		"*.db",
+		".DS_Store",
+		"*.pyc",
+		"*.pyo",
+		"*.swp",
+		"*~",
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
