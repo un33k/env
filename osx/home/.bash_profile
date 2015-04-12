@@ -7,14 +7,13 @@ cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
-alias e="subl"
-alias be="bundle exec"
-alias ls="ls -GFh"
-
 export EDITOR=/usr/bin/vim
 export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
-export LINEMAN_AUTO_START=false
-export LINEMAN_AUTO_WATCH=true
+
+# Aliases configuration
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
 
 # Git configuration
 if [ -f ~/.bash_git ]; then

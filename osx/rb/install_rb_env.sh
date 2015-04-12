@@ -1,6 +1,6 @@
 # update version with latest of ruby, install brew and run this on a new osx
 
-VERSION=2.0.0p481
+VERSION=2.2.1
 brew update
 brew install rbenv ruby-build rbenv-vars readline ctags
 if [ -n "${ZSH_VERSION:-}" ]; then
