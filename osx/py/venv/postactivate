@@ -8,5 +8,4 @@ mkdir -p $PROJ_PATH > /dev/null 2>&1
 echo "Working on: $PROJ_PATH"
 cd $PROJ_PATH
 
-unset PYTHONPATH
-
+export PYTHONPATH=`pwd`
