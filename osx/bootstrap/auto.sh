@@ -17,8 +17,9 @@ initdb /usr/local/var/postgres -E utf8
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 # lunchy start|stop postgres
 
-# Install nodejs
+# Install nodejs and node version manager
 brew install nodejs
+git clone git://github.com/creationix/nvm.git ~/.nvm
 
 # Install python2/3
 brew install python
