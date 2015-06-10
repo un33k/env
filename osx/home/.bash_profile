@@ -48,9 +48,9 @@ fi
 
 # Node Version Manager Loader
 # Prerequisite: git clone git://github.com/creationix/nvm.git ~/.nvm
-export NVM_DIR="~/.nvm"
-if [ -f "$NVM_DIR/nvm.sh" ]; then
-  . "$NVM_DIR/nvm.sh"
+export NVM_DIR=~/.nvm
+if [ -f $NVM_DIR/nvm.sh ]; then
+  . $NVM_DIR/nvm.sh
 fi
 
 # A two-line colored Bash prompt (PS1) with Git branch and a line decoration
