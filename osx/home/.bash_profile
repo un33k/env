@@ -14,7 +14,7 @@ c () {
         open -a "Visual Studio Code"
     else
         [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-        open -a "Visual Studio Code" --args "$F"
+        open -a "Visual Studio Code" "$F"
     fi
 }
 
