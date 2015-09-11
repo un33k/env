@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+
+# Start and stop headless VMs
+# Fix the following variable to match your system
+
+
+VMHOME="${HOME}/Documents/Virtual Machines.localized"
+VMRUN=`which vmrun`
+VMS=`find "${VMHOME}" -depth 1 -name "*.vmwarevm"`
+
+if [ -z $1 ]
+   then echo "Usage: vmware list|start|stop|stopall"
+   exit 1
+fi
+
+# Allow spaces in file dir/name
+ORIG_IFS=${IFS}; IFS="
+"
+
+if [ "$1" == "list" ]; then
+    # Loop through and list all VMs
+    COUNTER=0
+    for opt in $VMS ; do
+        let COUNTER+=1
+        RUNNING=`ls "$opt" | grep -i vmem.lck | wc -l | sed 's/ //g'`
+        if [ "$RUNNING" -gt 0 ]; then
+            STATUS="[Running]"
+            echo -e "$COUNTER: $STATUS $opt"
+            # repair IFS
+            IFS=${ORIG_IFS}
+        else
+            STATUS="[Stopped]"
+            echo -e "$COUNTER: $STATUS $opt"
+        fi
+    done
+fi
+
+# stop all
+if [ "$1" == "stopall" ]; then
+    # Loop through and shutdown all VMs
+    for opt in $VMS ; do
+        RUNNING=`ls "$opt" | grep -i vmem.lck | wc -l | sed 's/ //g'`
+        if [ "$RUNNING" -gt 0 ]; then
+            # run file
+            `"${VMRUN}" stop "${opt}" 2>&1 > /dev/null`
+            echo -e "Stopping $opt"
+            # repair IFS
+            IFS=${ORIG_IFS}
+        fi
+    done
+fi
+
+# choose to stop one
+if [ "$1" == "stop" ]; then
+    # Loop through and shutdown all VMs
+    select opt in $VMS ; do
+        RUNNING=`ls "$opt" | grep -i vmem.lck | wc -l | sed 's/ //g'`
+        if [ "$RUNNING" -gt 0 ]; then
+            # run file
+            `"${VMRUN}" stop "${opt}" 2>&1 > /dev/null`
+            echo -e "VM stopped ...."
+            # repair IFS
+            IFS=${ORIG_IFS}
+            exit 0
+        fi
+    done
+fi
+
+# choose to start one # a non windows
+if [ "$1" == "start" ]; then
+    select opt in $VMS ; do
+        RUNNING=`ls $opt | grep "Applications" | wc -l | sed 's/ //g'`
+        if [ "$RUNNING" -gt 0 ]; then
+            # run file
+            echo "Windows not supported"
+            exit 0
+        else
+            # run file
+            `"${VMRUN}" start "${opt}" nogui 2>&1 > /dev/null`
+            echo -e "VM started ...."
+            # repair IFS
+            IFS=${ORIG_IFS}
+            exit 0
+        fi
+    done
+fi
+
+IFS=${ORIG_IFS}
