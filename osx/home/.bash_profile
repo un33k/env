@@ -68,3 +68,10 @@ PS_GIT="$YELLOW\$PS_GIT_BRANCH"
 PS_TIME="\[\033[\$((COLUMNS-10))G\] $RED[\t]"
 export PS1="\${PS_FILL}\[\033[0G\]${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
 
+LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
+ . $LUNCHY_DIR/lunchy-completion.bash
+fi
+
+eval "$(rbenv init - --no-rehash)"
+

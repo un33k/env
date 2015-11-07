@@ -9,6 +9,7 @@ brew doctor
 brew update
 brew install git
 brew install wget
+brew install ruby
 
 # Install postgresql
 #######################################
