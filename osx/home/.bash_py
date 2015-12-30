@@ -24,10 +24,10 @@ gpip(){
 ############## virtualevnwrapper ############
 alias v='workon'
 alias v.deactivate='deactivate'
+alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3 '
+alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3  --system-site-packages '
 alias v.mk2='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 '
-alias v.mk3='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3 '
 alias v.mk2s='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 --system-site-packages '
-alias v.mk3s='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3  --system-site-packages '
 alias v.rm='rmvirtualenv '
 alias v.switch='workon'
 alias v.add2virtualenv='add2virtualenv'
