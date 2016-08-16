@@ -4,8 +4,6 @@ alias gg="git grep"
 alias gitflush='git branch --merged master | grep -v master | xargs git branch -d && git remote prune origin'
 alias gitk='/usr/local/git/bin/gitk'
 
-export HOMEBREW_GITHUB_API_TOKEN=208f2952ca07731ea3a2335c7f6d7ac3c7556c90
-
 PS_LINE=`printf -- '- %.0s' {1..200}`
 function parse_git_branch {
   #update_terminal_cwd;

@@ -21,6 +21,10 @@ c () {
 export EDITOR=/usr/bin/vim
 export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
 
+if [ -f ~/.bash_tokens ]; then
+  . ~/.bash_tokens
+fi
+
 # Aliases configuration
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
