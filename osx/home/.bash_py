@@ -18,8 +18,8 @@ mkdir -p $WORKON_HOME > /dev/null 2>& 1
 ############## virtualevnwrapper ############
 alias v='workon'
 alias v.deactivate='deactivate'
-alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.5 '
-alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.5  --system-site-packages '
+alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.4 '
+alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.4  --system-site-packages '
 alias v.mk2='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 '
 alias v.mk2s='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 --system-site-packages '
 alias v.rm='rmvirtualenv '
