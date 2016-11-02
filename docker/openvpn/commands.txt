@@ -1,0 +1,17 @@
+# ssh into container
+docker exec -it <container id/name> bash
+
+# show all containers
+docker ps -a
+
+# stop contianer
+docker stop <container id/name>
+
+# stop remove container
+docker rm <container id/name>
+
+# show images
+docker images
+
+# remvoe images
+docker rmi <image>

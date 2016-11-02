@@ -1,0 +1,52 @@
+# CONFI IMAGE
+docker run --rm -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn ovpn_genconfig -u tcp://passage.neekware.com:443
+# INIT
+docker run --rm -v $OVPN_DATA:/etc/openvpn -it kylemanna/openvpn ovpn_initpki
+# NAME Instance
+docker run -v $OVPN_DATA:/etc/openvpn --name vpn443tcp -d -p 443:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn
+
+# CREATE CLIENT
+docker run --rm -v $OVPN_DATA:/etc/openvpn -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass
+# COPY out client config
+docker run --rm -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn ovpn_getclient CLIENTNAME > CLIENTNAME.ovpn
+
+#### Restart on failure
+docker update --restart=always vpn443tcp
+
+# https://docs.docker.com/engine/admin/host_integration/
+# https://github.com/kylemanna/docker-openvpn/blob/a17dfd7808ec232232265c9f394f090806e2e830/docs/clients.md
+
+# Restart on Reboot
+#IN /etc/systemd/system/docker-vpn443tcp.service
+-------
+[Unit]
+Description=Docker OpenVPN  container TCP 443
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a vpn443tcp
+ExecStop=/usr/bin/docker stop -t 2 vpn443tcp
+
+[Install]
+WantedBy=default.target
+------
+
+# ACTIVATE auto startup
+systemctl daemon-reload
+systemctl start docker-vpn443tcp.service
+systemctl enable docker-vpn443tcp.service
+
+
+#### remove clients
+# LIST clients
+docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn ovpn_listclients
+# REMOVE client
+docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn easyrsa revoke CLIENTNAME
+# REGEN CRL
+docker run --rm -it -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn easyrsa gen-crl
+# RESTART
+docker restart <container id/name>
+
+
