@@ -25,20 +25,3 @@ $ createdb `whoami`
 
 # make your own development user a superuser
 sudo -u postgres createuser --superuser $USER
-
-# connect to postgres
-psql -U postgres
-
-# create database
-postgres=# create database database_name encoding = 'UTF8';
-
-# create database (base on template)
-postgres=# create database database_name with template = template0 encoding = 'UTF8';
-
-# create GIS database
-postgres=# create database database_name encoding = 'UTF8';
-postgres=# \c database_name;
-postgres=# create extension postgis;
-
-# create database from within (GIS based on template)
-postgres=# create database database_name with template = template_postgis encoding = 'UTF8';

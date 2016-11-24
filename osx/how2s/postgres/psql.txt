@@ -1,28 +1,3 @@
-# create a user and database, assign database to user
-
-# user is postgres or on OSX is _postgres or $USER for current user
-$ psql -d template1 -U postgres
-
-# create user
-template1=# CREATE USER username_goes_here WITH PASSWORD 'user_password_goes_here';
-
-# create a database
-template1=# CREATE DATABASE database_name_goes_here;
-
-# assign the database to user
-template1=# GRANT ALL PRIVILEGES ON DATABASE database_name_goes_here to user_name_goes_here;
-
-# verify the user
-template1=# \du
-
-# verify database
-template1=# \l
-
-# quite out of psql
-template1=# \q
-
-
-
 ###########################
 
 # create a database and assign it to an existing user
@@ -42,8 +17,38 @@ $ pg_dumpall -U privileged_user_name > all_dump_file.sql
 $ pg_dump --table database_name_goes_here -U username_goes_here table_name_goes_here -f table_dump_name_goes_here.sql
 
 
+###########################
+# connect to postgres
+$ psql -U postgres
 
+# create database
+postgres=# create database database_name encoding = 'UTF8';
 
+# create database (base on template)
+postgres=# create database database_name with template = template0 encoding = 'UTF8';
+
+# create GIS database
+postgres=# create database database_name encoding = 'UTF8';
+postgres=# \c database_name;
+postgres=# create extension postgis;
+
+# create database from within (GIS based on template)
+postgres=# create database database_name with template = template_postgis encoding = 'UTF8';
+
+# create a user with no privileges
+postgres=# create role user_name with nosuperuser nocreatedb nocreaterole login encrypted password 'user_password';
+
+# grant full privileges to database to a user
+postgres=# grant all privileges on database database_name to user_name;
+
+# verify the user
+postgres=# \du
+
+# verify database
+postgres=# \l
+
+# quite out of psql
+postgres=# \q
 
 
 
