@@ -1,0 +1,23 @@
+# ssh into container
+docker exec -it <container id/name> bash
+
+# show all containers
+docker ps -a
+
+# show all containers with status=<exited | created>
+docker ps --all -f status=exited
+
+# stop a container
+docker stop <container id/name>
+
+# remove a container
+docker rm <container id/name>
+
+# remove all containers with status=<exited | created>
+docker ps --all -q -f status=exited | xargs docker rm
+
+# show images
+docker images
+
+# remvoe images
+docker rmi <image>
