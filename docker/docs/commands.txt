@@ -1,0 +1,96 @@
+### Docker Machine ###
+##############################
+
+# Start VM
+docker-machine start
+
+# Stop VM
+docker-machine stop
+
+# Display Docker client setup commands
+docker-machine env
+
+### Docker Client ###
+##############################
+
+## Generic Stuff ##
+#=============================
+# Get help on a specific command
+docker <command> --help
+
+# ssh into container
+docker exec -it <ContainerID/ContainerName> bash
+
+
+## Image Stuff ##
+#=============================
+
+# Pull image from Docker Hub
+docker pull <Name of Image>
+
+# Show all images
+docker images
+
+# Remove specific images
+docker rmi <ImageID>
+
+# Remove untagged images
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+# Build an image from a Dockerfile
+docker build -f <Your Dockerfile> -t <Tag Name> .
+
+# Login using your Docker credentials
+docker login
+
+# Push an image to Docker hub
+docker push <Your Image Name>
+
+## Container Stuff ##
+#=============================
+
+# Show all containers
+docker ps -a
+
+# Formatted list of containers
+docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
+
+# Run a container
+docker run -d --name <Container Name> -p <External Port>:<Container Port> <Your Image>
+
+# Show all containers with status=<exited | created>
+docker ps --all -f status=exited
+
+# Stop specific container
+docker stop <ContainerID/ContainerName>
+
+# Remove specific container
+docker rm <ContainerID/ContainerName>
+
+#  Remove all containers
+docker rm $(docker ps -a -q)
+
+# Remove all containers with status=<exited | created>
+docker rm $(docker ps --all -q -f status=exited)
+
+
+### Docker Compose ###
+##############################
+
+# Build images based on docker-compose
+docker-compose build
+
+# Start in daemon mode
+docker-compose up -d
+
+# Show logs from containers
+docker-compose logs
+
+# Start containers based on docker-compose
+docker-compose up
+
+# Stop containers
+docker-compose stop
+
+# Stop and remove containers
+docker-compose down
