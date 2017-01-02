@@ -38,18 +38,17 @@ postgres=# create database database_name with template = template_postgis encodi
 # create a user with no privileges
 postgres=# create role user_name with nosuperuser nocreatedb nocreaterole login encrypted password 'user_password';
 
+# change password for user
+postgres=# alter user user_name with password '<newpassword>';
+
 # grant full privileges to database to a user
 postgres=# grant all privileges on database database_name to user_name;
 
-# verify the user
+# show all user
 postgres=# \du
 
-# verify database
+# show all database
 postgres=# \l
 
-# quite out of psql
+# quite and exit psql
 postgres=# \q
-
-
-
-

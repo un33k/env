@@ -21,6 +21,11 @@ docker <command> --help
 # ssh into container
 docker exec -it <ContainerID/ContainerName> bash
 
+# connect to a container
+CONTAINER=$(sudo docker run -d -t <ContainerID/ContainerName>)
+CONTAINER_IP=$(sudo docker inspect -f '{{ .NetworkSettings.IPAddress }}' $CONTAINER)
+psql -h $CONTAINER_IP -p 5432 -U postgres
+
 
 ## Image Stuff ##
 #=============================
