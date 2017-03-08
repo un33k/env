@@ -1,15 +1,13 @@
 #!/bin/sh
 
-# Loops over all git directories and backs them up
 
-declare -a gitDirectories=(`find . -type d -name .git | sed 's/.git//g'`)
+declare -a GIT_REPOS=(`find . -type d -name .git | sed 's/.git//g'`)
 
-for i in ${gitDirectories[@]}; do
+
+#loop over the array of directories and back them up
+for i in ${GIT_REPOS[@]}; do
     echo "Processing $i ..."
     cd $i
-    git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
-    git fetch --all
-    git pull --all
+    git branch -r | grep -v "\->" | sed 's/origin\///g' | while read local; do git checkout "$local"; git pull; done
     cd -
 done
-
