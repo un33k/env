@@ -35,7 +35,7 @@ brew install python3
 # unset PYTHONPATH
 
 export PIP_REQUIRE_VIRTUALENV=''
-pip install --upgrade pip setuptools virtualenv
+pip install --upgrade pip setuptools virtualenv wheel
 pip install virtualenv
 pip install virtualenvwrapper
 
