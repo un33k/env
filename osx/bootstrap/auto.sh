@@ -10,6 +10,7 @@ brew update
 brew install git
 brew install wget
 brew install ruby
+brew cask reinstall xquartz
 
 # Install postgresql
 #######################################
@@ -29,6 +30,10 @@ git clone git://github.com/creationix/nvm.git ~/.nvm
 # Install python2/3 - install python 3.5+ via https://www.python.org/downloads/
 brew install python
 brew install python3
+
+# To switch between python
+# unset PYTHONPATH
+
 export PIP_REQUIRE_VIRTUALENV=''
 pip install --upgrade --no-use-wheel pip setuptools virtualenv
 pip install virtualenv

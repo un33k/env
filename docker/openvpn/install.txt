@@ -1,7 +1,10 @@
+# INSTALL
+Cloudy ...
+
 # CONFI IMAGE
 docker run --rm -v $OVPN_DATA:/etc/openvpn kylemanna/openvpn ovpn_genconfig -u tcp://passage.neekware.com:443
 # INIT
-docker run --rm -v $OVPN_DATA:/etc/openvpn -it kylemanna/openvpn ovpn_initpki
+docker run --rm -v $OVPN_DATA:/etc/openvpn -it kylemanna/openvpn ovpn_initpki nopass
 # NAME Instance
 docker run -v $OVPN_DATA:/etc/openvpn --name vpn443tcp -d -p 443:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn
 

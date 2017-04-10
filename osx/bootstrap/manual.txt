@@ -3,5 +3,5 @@
 2. Install Xcode & Install command line tools
    $ xcode-select --install
 
-3. Install latest quartz
+3. Install latest quartz (only if `brew cask reinstall xquartz` fails.)
     @ http://xquartz.macosforge.org/landing/
