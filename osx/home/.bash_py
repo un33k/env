@@ -8,9 +8,9 @@ THIS_HOST=$(hostname -s)
 
 export PIP_REQUIRE_VIRTUALENV=true
 export VHOME_DIR=$HOME/Projects
-export WORKON_HOME=$VHOME_DIR/.$THIS_HOST-virenv
+export WORKON_HOME=$VHOME_DIR/.venv
 export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME
-export PIP_DOWNLOAD_CACHE=$VHOME_DIR/.pip_cache_dir
+export PIP_DOWNLOAD_CACHE=$VHOME_DIR/.pip_cache
 export VIRTUALENVWRAPPER_LOG_DIR=$WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 mkdir -p $WORKON_HOME > /dev/null 2>& 1
@@ -18,8 +18,8 @@ mkdir -p $WORKON_HOME > /dev/null 2>& 1
 ############## virtualevnwrapper ############
 alias v='workon'
 alias v.deactivate='deactivate'
-alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.4 '
-alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.4  --system-site-packages '
+alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.6 '
+alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.6  --system-site-packages '
 alias v.mk2='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 '
 alias v.mk2s='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 --system-site-packages '
 alias v.rm='rmvirtualenv '
