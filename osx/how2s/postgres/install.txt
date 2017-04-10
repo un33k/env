@@ -25,3 +25,9 @@ $ createdb `whoami`
 
 # make your own development user a superuser
 sudo -u postgres createuser --superuser $USER
+
+# to trust local user on localhost
+sudo vi /usr/local/var/postgres/pg_hba.conf
+# add or comment out
+#host    replication     val        127.0.0.1/32            trust
+#host    replication     val        ::1/128                 trust
