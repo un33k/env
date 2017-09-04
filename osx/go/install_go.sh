@@ -16,5 +16,6 @@ mkdir -p $GOPATH/src/github.com/user
 echo "installation done."
 echo "export GOPATH=${GOPATH}"
 
-go get code.google.com/p/go-tour/gotour
-gotour
+# Run the following to test
+# go get golang.org/x/tour/gotour
+# gotour
