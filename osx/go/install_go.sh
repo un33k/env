@@ -7,8 +7,9 @@
 
 brew update && brew upgrade
 brew install go
-brew install git
-brew install mercurial
+
+#brew install git
+#brew install mercurial
 
 mkdir -p $GOPATH/src/github.com/user
 
