@@ -1,27 +1,33 @@
 # Python configuration
 
-export PYTHONPATH=/usr/local/lib/python3/site-packages
+#export PYTHONPATH=/usr/local/lib/python3/site-packages
 
 THIS_HOST=$(hostname -s)
 
 ############ Python, VirtualEnv & VirtualEnvWrapper ##########
+PY2=/usr/local/bin/python2
+PY2DIST=/usr/local/lib/python2/site-packages
+PY3=/usr/local/bin/python3.5
+PY3DIST=/usr/local/lib/python3/site-packages
 
 export PIP_REQUIRE_VIRTUALENV=true
 export VHOME_DIR=$HOME/Projects
 export WORKON_HOME=$VHOME_DIR/.venv
-export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME
 export PIP_DOWNLOAD_CACHE=$VHOME_DIR/.pip_cache
+mkdir -p $WORKON_HOME > /dev/null 2>& 1
+
+export VIRTUALENVWRAPPER_PYTHON=$PYTHON3
+export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME
 export VIRTUALENVWRAPPER_LOG_DIR=$WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
-mkdir -p $WORKON_HOME > /dev/null 2>& 1
 
 ############## virtualevnwrapper ############
 alias v='workon'
 alias v.deactivate='deactivate'
-alias v.mk='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.6 '
-alias v.mk2='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 '
-alias v.mks='PYTHONPATH="/usr/local/lib/python3/site-packages" mkvirtualenv --python=/usr/local/bin/python3.6  --system-site-packages '
-alias v.mk2s='PYTHONPATH="/usr/local/lib/python2/site-packages" mkvirtualenv --python=/usr/local/bin/python2 --system-site-packages '
+alias v.mk='PYTHONPATH="$PY3DIST" mkvirtualenv --python=$PY3 '
+alias v.mks='PYTHONPATH="$PY3DIST" mkvirtualenv --python=$PY3 --system-site-packages '
+alias v.mk2='PYTHONPATH="$PY2DIST" mkvirtualenv --python=$PY2 '
+alias v.mk2s='PYTHONPATH="$PY3DIST" mkvirtualenv --python=$PY2 --system-site-packages '
 alias v.rm='rmvirtualenv '
 alias v.switch='workon'
 alias v.add2virtualenv='add2virtualenv'
@@ -36,5 +42,5 @@ function server() {
   open "http://localhost:${port}/"
   # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
   # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-  python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+  $PY2 -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
