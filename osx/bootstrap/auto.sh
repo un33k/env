@@ -48,6 +48,17 @@ brew install libjpeg
 brew install libtiff
 brew install libpng
 
+# Utils, Config directory
+mkdir ~/.utils
+mkdir ~./config
+
+# Bash prompt
+cd ~/.utils
+git clone https://github.com/nojhan/liquidprompt.git
+source liquidprompt/liquidprompt
+echo 'LP_ENABLE_TIME' > ~/.config/liquidpromptrc
+cd -
+
 #
 brew cleanup
 export PIP_REQUIRE_VIRTUALENV=true
