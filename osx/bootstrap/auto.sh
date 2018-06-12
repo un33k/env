@@ -57,6 +57,9 @@ git clone https://github.com/nojhan/liquidprompt.git
 source liquidprompt/liquidprompt
 cd -
 
+# Git completion
+cp ../git/.git-completion.bash ~/
+
 #
 brew cleanup
 export PIP_REQUIRE_VIRTUALENV=true

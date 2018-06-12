@@ -11,7 +11,7 @@ export EDITOR=/usr/bin/vim
 export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
 
 if [ -f ~/.bash_editors ]; then
-  . ~/.bash_tokens
+  . ~/.bash_editors
 fi
 
 if [ -f ~/.bash_utils ]; then
@@ -32,11 +32,6 @@ fi
 if [ -f ~/.svn/svn.conf ]; then
 . ~/.svn/svn.conf
 fi
-
-# Ruby configuration
-# if [ -f ~/.bash_rb ]; then
-#   . ~/.bash_rb
-# fi
 
 # Python configuration
 if [ -f ~/.bash_py ]; then
