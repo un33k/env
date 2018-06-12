@@ -1,0 +1,8 @@
+# https://github.com/settings/tokens
+# Add access tokens to the following
+
+export GHOMEBREW_GITHUB_API_TOKE=
+export GITHUB_TOKEN=
+
+export PATH="$HOME/.yarn/bin:$PATH"
+export CFLAGS="$CFLAGS -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
