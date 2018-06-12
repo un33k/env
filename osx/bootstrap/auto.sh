@@ -48,7 +48,7 @@ brew install libpng
 
 # Utils, Config directory
 mkdir ~/.utils
-mkdir ~./config
+mkdir ~/.config
 
 # Bash prompt
 cd ~/.utils
