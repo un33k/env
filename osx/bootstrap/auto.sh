@@ -51,10 +51,10 @@ mkdir -p ~/.utils
 mkdir -p ~/.config
 
 # Bash prompt
+echo 'LP_ENABLE_TIME=1' > ~/.config/liquidpromptrc
 cd ~/.utils
 git clone https://github.com/nojhan/liquidprompt.git
 source liquidprompt/liquidprompt
-echo 'LP_ENABLE_TIME' > ~/.config/liquidpromptrc
 cd -
 
 #
