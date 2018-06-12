@@ -54,7 +54,6 @@ GREEN="\[\033[01;32m\]"
 BLUE="\[\033[01;34m\]"
 YELLOW="\[\033[0;33m\]"
 
-PROMPT_COMMAND=parse_git_branch
 PS_INFO="$GREEN\u@\h$RESET:$BLUE\w"
 PS_GIT="$YELLOW\$PS_GIT_BRANCH"
 PS_TIME="\[\033[\$((COLUMNS-10))G\] $RED[\t]"
