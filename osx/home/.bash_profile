@@ -38,6 +38,11 @@ if [ -f ~/.bash_py ]; then
   . ~/.bash_py
 fi
 
+# Go configuration
+if [ -f ~/.bash_go ]; then
+  . ~/.bash_go
+fi
+
 # Node Version Manager Loader
 # Prerequisite: git clone git://github.com/creationix/nvm.git ~/.nvm
 export NVM_DIR=~/.nvm
