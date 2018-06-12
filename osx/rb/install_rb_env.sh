@@ -3,7 +3,6 @@
 VERSION=2.2.1
 brew update
 brew install rbenv ruby-build rbenv-vars readline ctags
-echo 'eval "$(rbenv init - --no-rehash)"' >> ~/.bash_profile
 eval "$(rbenv init - --no-rehash)" # load rbenv in the current shell
 CONFIGURE_OPTS="--disable-install-doc --with-readline-dir=$(brew --prefix readline)" rbenv install $VERSION
 rbenv global $VERSION

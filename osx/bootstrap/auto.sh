@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install lunchy
-sudo gem install lunchy
-
 # Install brew ( # brew doctor,update,search,install,list,remove)
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
@@ -17,15 +14,16 @@ brew cask reinstall xquartz
 brew install postgresql
 initdb /usr/local/var/postgres -E utf8
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-# lunchy start|stop postgres
+brew services start postgresql
 
 # Install postgis
 #######################################
 brew install postgis
 
-# Install nodejs and node version manager
+# Install nodejs and node version manager & yarn
 brew install nodejs
 git clone git://github.com/creationix/nvm.git ~/.nvm
+brew install yarn --without-node
 
 # Install python2/3 - install python 3.5+ via https://www.python.org/downloads/
 brew install python
