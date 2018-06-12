@@ -18,10 +18,6 @@ if [ -f ~/.bash_utils ]; then
   . ~/.bash_utils
 fi
 
-if [ -f ~/.bash_tokens ]; then
-  . ~/.bash_tokens
-fi
-
 # Aliases configuration
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
@@ -38,9 +34,9 @@ if [ -f ~/.svn/svn.conf ]; then
 fi
 
 # Ruby configuration
-if [ -f ~/.bash_rb ]; then
-  . ~/.bash_rb
-fi
+# if [ -f ~/.bash_rb ]; then
+#   . ~/.bash_rb
+# fi
 
 # Python configuration
 if [ -f ~/.bash_py ]; then
