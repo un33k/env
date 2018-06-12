@@ -58,6 +58,7 @@ source liquidprompt/liquidprompt
 cd -
 
 # Git completion
+# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 cp ../git/.git-completion.bash ~/
 
 #
