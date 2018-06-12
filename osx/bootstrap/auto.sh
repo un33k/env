@@ -47,8 +47,8 @@ brew install libtiff
 brew install libpng
 
 # Utils, Config directory
-mkdir ~/.utils
-mkdir ~/.config
+mkdir -p ~/.utils
+mkdir -p ~/.config
 
 # Bash prompt
 cd ~/.utils
