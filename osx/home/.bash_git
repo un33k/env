@@ -1,17 +1,17 @@
 # Git configuration
 
+# https://github.com/settings/tokens
+# Add access tokens to the following
+
+export GHOMEBREW_GITHUB_API_TOKE=
+export GITHUB_TOKEN=
+
+
 alias gg="git grep"
 alias gitflush='git branch --merged master | grep -v master | xargs git branch -d && git remote prune origin'
 alias gitk='/usr/local/git/bin/gitk'
 
 PS_LINE=`printf -- '- %.0s' {1..200}`
-function parse_git_branch {
-  #update_terminal_cwd;
-  PS_GIT_BRANCH=''
-  PS_FILL=${PS_LINE:0:$COLUMNS}
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  PS_GIT_BRANCH="(${ref#refs/heads/}) "
-}
 
 # Git configuration
 if [ -f ~/.git-completion.bash ]; then
@@ -23,3 +23,4 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
     . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 
+[[ $- = *i* ]] && source ~/.utils/liquidprompt/liquidprompt
