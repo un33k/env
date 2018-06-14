@@ -50,6 +50,11 @@ if [ -f $NVM_DIR/nvm.sh ]; then
   . $NVM_DIR/nvm.sh
 fi
 
+# NPM configuration
+if [ -f ~/.bash_npm ]; then
+  . ~/.bash_npm
+fi
+
 # A two-line colored Bash prompt (PS1) with Git branch and a line decoration
 # which adjusts automatically to the width of the terminal by Michal Kottman
 
