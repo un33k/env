@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 # Install brew ( # brew doctor,update,search,install,list,remove)
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap homebrew/cask
 brew doctor
 brew update
 brew install git
-brew install wget
-brew install ruby
-brew cask reinstall xquartz
+
+# Install iTerm2
+#######################################
+brew cask install iterm2-nightly
 
 # Install postgresql
 #######################################
@@ -16,6 +18,12 @@ initdb /usr/local/var/postgres -E utf8
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 brew services start postgresql
 
+# To have launchd start postgresql now and restart at login:
+# $ brew services start postgresql
+# Or, if you don't want/need a background service you can just run:
+# $ pg_ctl -D /usr/local/var/postgres start | stop
+
+
 # Install postgis
 #######################################
 brew install postgis
@@ -23,17 +31,17 @@ brew install postgis
 # Install nodejs and node version manager & yarn
 brew install nodejs
 git clone git://github.com/creationix/nvm.git ~/.nvm
-brew install yarn --without-node
 
-# Install python2/3 - install python 3.5+ via https://www.python.org/downloads/
-brew install python
+# Yarn - Alternative $ curl -o- -L https://yarnpkg.com/install.sh | bash
+brew install yarn
+
+# Install python2/3 - install python 3.7+ via https://www.python.org/downloads/
 brew install python3
 
 # To switch between python
 # unset PYTHONPATH
 
 export PIP_REQUIRE_VIRTUALENV=''
-pip install --upgrade pip setuptools virtualenv wheel
 pip install virtualenv
 pip install virtualenvwrapper
 
@@ -58,8 +66,8 @@ source liquidprompt/liquidprompt
 cd -
 
 # Git completion
-# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
-cp ../git/.git-completion.bash ~/
+# wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+cp git-completion.zsh ../git/.git-completion.zsh ~/
 
 #
 brew cleanup

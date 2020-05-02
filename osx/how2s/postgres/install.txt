@@ -10,6 +10,8 @@ $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 
 # start postgres when OSX starts
 $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+# via alias
+$ pg_start | pg_stop
 
 # ensure /usr/local/bin is on top of the file
 $ sudo vi /etc/paths

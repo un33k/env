@@ -1,5 +1,8 @@
 ###########################
 
+# start | stop postgres
+pg_start | pg_stop
+
 # create a database and assign it to an existing user
 sudo -u postgres
 $ createdb -O user_name_goes_here database_name_goes_here
