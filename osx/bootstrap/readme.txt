@@ -11,7 +11,7 @@
 mkdir ~/.zsh
 
 - Copy zsh script into .zsh directory
-cp env/osx/home/.zsh-* ~/.zsh
+cp env/osx/home/.zsh_* ~/.zsh
 cp env/osx/git/.git-completion.zsh ~/.zsh
 cp env/osx/git/.git-prompt.zsh ~/.zsh
 
