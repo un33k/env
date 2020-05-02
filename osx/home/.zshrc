@@ -20,37 +20,42 @@ cdf() {  # short for cdfinder
 export EDITOR=/usr/bin/vim
 # export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
 
-if [ -f ~/.zsh_editors ]; then
-  . ~/.zsh_editors
+if [ -f ~/.zsh-editors.sh ]; then
+  . ~/.zsh-editors
 fi
 
-if [ -f ~/.zsh_utils ]; then
-  . ~/.zsh_utils
+if [ -f ~/.zsh-utils.sh ]; then
+  . ~/.zsh-utils
 fi
 
 # Aliases configuration
-if [ -f ~/.zsh_aliases ]; then
-  . ~/.zsh_aliases
+if [ -f ~/.zsh-aliases.sh ]; then
+  . ~/.zsh-aliases
 fi
 
 # Git configuration
-if [ -f ~/.zsh_git ]; then
-  . ~/.zsh_git
+if [ -f ~/.zsh-git.sh ]; then
+  . ~/.zsh-git
 fi
 
 # SVN configuration
-if [ -f ~/.svn/svn.conf ]; then
+if [ -f ~/.svn/svn.conf.sh ]; then
 . ~/.svn/svn.conf
 fi
 
 # Python configuration
-if [ -f ~/.zsh_py ]; then
-  . ~/.zsh_py
+if [ -f ~/.zsh-py.sh ]; then
+  . ~/.zsh-py
 fi
 
 # Go configuration
-if [ -f ~/.zsh_go ]; then
-  . ~/.zsh_go
+if [ -f ~/.zsh-go.sh ]; then
+  . ~/.zsh-go
+fi
+
+# zsh git prompt
+if [ -f ~/.zsh-go.sh ]; then
+  . ~/.zsh-go
 fi
 
 # Node Version Manager Loader
@@ -61,8 +66,13 @@ if [ -f $NVM_DIR/nvm.sh ]; then
 fi
 
 # NPM configuration
-if [ -f ~/.zsh_npm ]; then
-  . ~/.zsh_npm
+if [ -f ~/.zsh-npm.sh ]; then
+  . ~/.zsh-npm
+fi
+
+# NPM configuration
+if [ -f ~/.zsh-npm.sh ]; then
+  . ~/.zsh-npm
 fi
 
 # A two-line colored Bash prompt (PS1) with Git branch and a line decoration

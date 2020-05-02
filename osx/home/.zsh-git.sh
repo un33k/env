@@ -19,9 +19,10 @@ if [ -f ~/.git-completion.zsh ]; then
   . ~/.git-completion.zsh
 fi
 
-# git tab completion (homebrew)
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+# Git prompt configuration
+#https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/gitfast/git-prompt.sh
+if [ -f ~/.git-prompt.zsh ]; then
+  . ~/.git-prompt.zsh
 fi
 
-[[ $- = *i* ]] && source ~/.utils/liquidprompt/liquidprompt
+#[[ $- = *i* ]] && source ~/.utils/liquidprompt/liquidprompt
