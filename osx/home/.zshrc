@@ -20,11 +20,49 @@ cdf() {  # short for cdfinder
 export EDITOR=/usr/bin/vim
 # export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
 
+if [ -f ~/.zsh/.zsh_editors ]; then
+  . ~/.zsh/.zsh_editors
+fi
+
+if [ -f ~/.zsh/.zsh_utils ]; then
+  . ~/.zsh/.zsh_utils
+fi
+
+# Aliases configuration
+if [ -f ~/.zsh/.zsh_aliases ]; then
+  . ~/.zsh/.zsh_aliases
+fi
+
+# Git configuration
+if [ -f ~/.zsh/.zsh_git ]; then
+  . ~/.zsh/.zsh_git
+fi
+
+# SVN configuration
+if [ -f ~/.svn/.zsh_svn ]; then
+. ~/.svn/.zsh_svn
+fi
+
+# Python configuration
+if [ -f ~/.zsh/.zsh_py ]; then
+  . ~/.zsh/.zsh_py
+fi
+
+# Go configuration
+if [ -f ~/.zsh/.zsh_go ]; then
+  . ~/.zsh/.zsh_go
+fi
+
 # Node Version Manager Loader
 # Prerequisite: git clone git://github.com/creationix/nvm.git ~/.nvm
 export NVM_DIR=~/.nvm
-if [ -f $NVM_DIR/nvm.sh ]; then
+if [ -f $NVM_DIR/nvm ]; then
   . $NVM_DIR/nvm.sh
+fi
+
+# NPM configuration
+if [ -f ~/.zsh/.zsh_npm ]; then
+  . ~/.zsh/.zsh_npm
 fi
 
 fpath=(~/.zsh $fpath)
