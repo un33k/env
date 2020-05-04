@@ -56,7 +56,7 @@ fi
 # Node Version Manager Loader
 # Prerequisite: git clone git://github.com/creationix/nvm.git ~/.nvm
 export NVM_DIR=~/.nvm
-if [ -f $NVM_DIR/nvm ]; then
+if [ -f $NVM_DIR/nvm.sh ]; then
   . $NVM_DIR/nvm.sh
 fi
 
