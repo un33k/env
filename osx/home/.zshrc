@@ -20,43 +20,37 @@ cdf() {  # short for cdfinder
 export EDITOR=/usr/bin/vim
 # export PATH=$LOCAL_BIN:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/p5merge.app/Contents/MacOS:$PATH
 
-if [ -f ~/.zsh/.zsh_editors ]; then
-  . ~/.zsh/.zsh_editors
+if [ -f ~/.zsh/zsh-editors.sh ]; then
+  . ~/.zsh/zsh-editors.sh
 fi
 
-if [ -f ~/.zsh/.zsh_utils ]; then
-  . ~/.zsh/.zsh_utils
+if [ -f ~/.zsh/zsh-utils.sh ]; then
+  . ~/.zsh/zsh-utils.sh
 fi
 
 # Aliases configuration
-if [ -f ~/.zsh/.zsh_aliases ]; then
-  . ~/.zsh/.zsh_aliases
+if [ -f ~/.zsh/zsh-aliases.sh ]; then
+  . ~/.zsh/zsh-aliases.sh
 fi
 
 # Git configuration
-if [ -f ~/.zsh/.zsh_git ]; then
-  . ~/.zsh/.zsh_git
-fi
-
-# SVN configuration
-if [ -f ~/.svn/.zsh_svn ]; then
-. ~/.svn/.zsh_svn
+if [ -f ~/.zsh/zsh-git.sh ]; then
+  . ~/.zsh/zsh-git.sh
 fi
 
 # Python configuration
-if [ -f ~/.zsh/.zsh_py ]; then
-  . ~/.zsh/.zsh_py
+if [ -f ~/.zsh/zsh-py.sh ]; then
+  . ~/.zsh/zsh-py.sh
 fi
 
 # Go configuration
-if [ -f ~/.zsh/.zsh_go ]; then
-  . ~/.zsh/.zsh_go
+if [ -f ~/.zsh/zsh-go.sh ]; then
+  . ~/.zsh/zsh-go.sh
 fi
 
-# Node
-# NPM configuration
-if [ -f ~/.zsh/.zsh_npm ]; then
-  . ~/.zsh/.zsh_npm
+# Node npm configuration
+if [ -f ~/.zsh/zsh-npm.sh ]; then
+  . ~/.zsh/zsh-npm.sh
 fi
 
 # Node Version Manager Loader
@@ -66,19 +60,21 @@ if [ -f $NVM_DIR/nvm.sh ]; then
   . $NVM_DIR/nvm.sh
 fi
 
-fpath=(~/.zsh $fpath)
+# fpath=(~/.zsh $fpath)
 
 # A two-line colored Bash prompt (PS1) with Git branch and a line decoration
 # which adjusts automatically to the width of the terminal by Michal Kottman
 
-# RESET="\[\033[0m\]"
-# RED="\[\033[0;31m\]"
-# GREEN="\[\033[01;32m\]"
-# BLUE="\[\033[01;34m\]"
-# YELLOW="\[\033[0;33m\]"
+RESET="\[\033[0m\]"
+RED="\[\033[0;31m\]"
+GREEN="\[\033[01;32m\]"
+BLUE="\[\033[01;34m\]"
+YELLOW="\[\033[0;33m\]"
 
 # PS_INFO="$GREEN\u@\h$RESET:$BLUE\w"
 # PS_GIT="$YELLOW\$PS_GIT_BRANCH"
 # PS_TIME="\[\033[\$((COLUMNS-10))G\] $RED[\h]"
 # export PS1="\${PS_FILL}\[\033[0G\]${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
+# export PS1="\${PS_FILL}\[\033[0G\]${PS_INFO} ${PS_GIT}\n${RESET}\$ "
 
+setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
