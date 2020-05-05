@@ -53,16 +53,17 @@ if [ -f ~/.zsh/.zsh_go ]; then
   . ~/.zsh/.zsh_go
 fi
 
+# Node
+# NPM configuration
+if [ -f ~/.zsh/.zsh_npm ]; then
+  . ~/.zsh/.zsh_npm
+fi
+
 # Node Version Manager Loader
 # Prerequisite: git clone git://github.com/creationix/nvm.git ~/.nvm
 export NVM_DIR=~/.nvm
 if [ -f $NVM_DIR/nvm.sh ]; then
   . $NVM_DIR/nvm.sh
-fi
-
-# NPM configuration
-if [ -f ~/.zsh/.zsh_npm ]; then
-  . ~/.zsh/.zsh_npm
 fi
 
 fpath=(~/.zsh $fpath)
