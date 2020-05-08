@@ -2,15 +2,26 @@
 
 # Paths
 #######################################
-ZSH_DIR="~/.zsh"
-UTL_DIR="~/.utils"
-CFG_DIR="~/.config"
+HOME="~"
+BIN_DIR="${HOME}/.bin"
+ZSH_DIR="${HOME}/.zsh"
+UTL_DIR="${HOME}/.utils"
+CFG_DIR="${HOME}/.config"
 
 # Create Directories
 #######################################
+mkdir -p ${BIN_DIR}
 mkdir -p ${ZSH_DIR}
 mkdir -p ${UTL_DIR}
 mkdir -p ${CFG_DIR}
+
+# Copy Scripts / Configs
+#######################################
+cp ../bin/* ${BIN_DIR}
+cp ../git/.giconfig ${HOME}
+cp ../home/.zshrc ${HOME}
+cp ../home/.npmrc ${HOME}
+cp ../home/zsh-* ${ZSH_DIR}
 
 # Install Oh My Zsh
 #######################################
@@ -32,6 +43,7 @@ brew update                             # Brew Update
 #######################################
 brew install node                       # Node JS Runtime Env
 brew install git                        # Git Distributed Source Control
+brew install git-gui                    # Git Gui - Gitk
 brew install yarn                       # Node Package Manager
 brew install make                       # Make - Compile
 brew install travis                     # Continous Integration (CI)
