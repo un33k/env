@@ -3,10 +3,6 @@
 # https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 # cp git-completion.zsh git/
 
-# Git prompt configuration
-# https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/gitfast/git-prompt.sh
-# cp git-prompt.sh git/
-
 - Make a .zsh directory
 mkdir ~/.zsh
 
@@ -19,3 +15,11 @@ cp env/osx/git/git-prompt.zsh ~/.zsh
 
 - Install Xcode & Install command line tools
    $ xcode-select --install
+
+# To have launchd start postgresql now and restart at login:
+# $ brew services start postgresql
+# Or, if you don't want/need a background service you can just run:
+# $ pg_ctl -D /usr/local/var/postgres start | stop
+
+# To switch between python
+# unset PYTHONPATH
