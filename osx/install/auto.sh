@@ -2,7 +2,7 @@
 
 # Github
 #######################################
-GITHUB="${GITHUB}"
+GITHUB="https://raw.github.com"
 
 # Brew & Friends
 #######################################
@@ -15,7 +15,6 @@ brew install wget                       # Wget Utils
 
 # Required Paths
 #######################################
-HOME="~"                                # Home Directory
 BIN_DIR="${HOME}/.bin"                  # Private Bin
 ZSH_DIR="${HOME}/.zsh"                  # Directory for zsh scripts
 UTL_DIR="${HOME}/.utils"                # Directory for utility scripts
