@@ -7,7 +7,7 @@ GITHUB="https://raw.github.com"
 # Brew & Friends
 #######################################
 HOME_BREW="${GITHUB}/Homebrew/install/master/install.sh"
-curl -o- ${HOME_BREW} | bash
+curl -fsSL ${HOME_BREW} | bash
 brew tap homebrew/cask                  # Default Cask
 brew doctor                             # Brew Doctor
 brew update                             # Brew Update
@@ -44,7 +44,7 @@ wget -q ${ITERM_THEME_MT} -O ${CFG_DIR}/material-design-colors.itermcolors
 # Zsh & Friends
 #######################################
 OH_MY_ZSH="${GITHUB}/ohmyzsh/ohmyzsh/master/tools/install.sh"
-curl -o- ${OH_MY_ZSH} | bash
+curl -fsSL ${OH_MY_ZSH} | bash
 
 # Core
 #######################################
@@ -91,7 +91,7 @@ LIBMEMCACHED=/opt/local pip install pylibmc
 brew install node                       # Node JS Runtime Env
 brew install yarn                       # Node Package Manager
 NVM="${GITHUB}/nvm-sh/nvm/v0.35.2/install.sh"
-curl -o- ${NVM} | bash
+curl -fsSL ${NVM} | bash
 
 # Python & Friends
 #######################################
