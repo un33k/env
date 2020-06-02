@@ -30,7 +30,7 @@ mkdir -p ${CFG_DIR}
 # Required Scripts & Configurations
 #######################################
 cp ../bin/* ${BIN_DIR}
-cp ../git/.giconfig ${HOME}
+cp ../git/.gitconfig ${HOME}
 cp ../home/.zshrc ${HOME}
 cp ../home/.npmrc ${HOME}
 cp ../home/zsh-* ${ZSH_DIR}
