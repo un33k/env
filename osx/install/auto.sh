@@ -72,15 +72,6 @@ brew install git-gui                      # Git Gui - Gitk
 GIT_COMPLETION="${GITHUB}/git/git/master/contrib/completion/git-completion.zsh"
 wget -q ${GIT_COMPLETION} -O ${ZSH_DIR}/git-completion.zsh
 
-# Postgres & Friends
-#######################################
-brew cask install postgres                # Postgresql (Relational Database)
-brew cask install postgis                 # Postgresql GIS extension
-brew cask install postico                 # Postgresql Mac Client
-initdb /usr/local/var/postgres -E utf8
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-brew services start postgresql
-
 # MemCache & Friends
 #######################################
 brew install libmemcached
@@ -105,6 +96,15 @@ pip install virtualenvwrapper           # Virtual Env Wrapper
 brew install libjpeg
 brew install libtiff
 brew install ibpng
+
+# Postgres & Friends
+#######################################
+brew install postgres                     # Postgresql (Relational Database)
+brew install postgis                      # Postgresql GIS extension
+brew install postico                      # Postgresql Mac Client
+initdb /usr/local/var/postgres -E utf8
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+brew services start postgresql
 
 # Clean ups
 #######################################
