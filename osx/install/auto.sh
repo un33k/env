@@ -64,6 +64,10 @@ brew cask install rectangle               # Move & Resize & Grap Windows on MacO
 brew cask install keybase                 # Messages & Chats Encryption
 brew cask install spotify                 # Music Platform
 brew cask install vlc                     # Media Player
+cask install alfred                       # Alfred Productivity
+cask install caffeine                     # Prevents Mac Sleeping
+cask install slack                        # Team communiction tool
+
 
 # Git & Friends
 #######################################
