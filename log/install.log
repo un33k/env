@@ -1,0 +1,742 @@
+zsh: command not found: __git_ps1                                                                                                   
+@MacBook-Pro osx$ cd install 
+zsh: command not found: __git_ps1                                                                                                   
+@MacBook-Pro install$ ls
+auto.sh     readme.txt
+zsh: command not found: __git_ps1                                                                                                   
+@MacBook-Pro install$ bash -x auto.sh 
++ GITHUB=https://raw.github.com
++ HOME_BREW=https://raw.github.com/Homebrew/install/master/install.sh
++ curl -fsSL https://raw.github.com/Homebrew/install/master/install.sh
++ bash
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+==> The following existing directories will be made writable by user only:
+/usr/local/share/zsh
+/usr/local/share/zsh/site-functions
+Password:
+==> /usr/bin/sudo /bin/chmod u+rwx /usr/local/share/zsh /usr/local/share/zsh/site-functions
+==> /usr/bin/sudo /bin/chmod 755 /usr/local/share/zsh /usr/local/share/zsh/site-functions
+==> Downloading and installing Homebrew...
+HEAD is now at 03050019d Merge pull request #7672 from Homebrew/dependabot/bundler/docs/ffi-1.13.0
+Already up-to-date.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (or will be during this `install` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run `brew help` to get started
+- Further documentation: 
+    https://docs.brew.sh
++ brew tap homebrew/cask
+==> Tapping homebrew/cask
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'...
+remote: Enumerating objects: 60, done.
+remote: Counting objects: 100% (60/60), done.
+remote: Compressing objects: 100% (54/54), done.
+remote: Total 442283 (delta 30), reused 18 (delta 6), pack-reused 442223
+Receiving objects: 100% (442283/442283), 199.04 MiB | 29.38 MiB/s, done.
+Resolving deltas: 100% (313210/313210), done.
+Tapped 1 command and 3560 casks (3,677 files, 213.6MB).
++ brew doctor
+Your system is ready to brew.
++ brew update
+Already up-to-date.
++ brew install wget
+==> Downloading https://homebrew.bintray.com/bottles/gettext-0.20.2_1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/71/71f4ded03e8258b5e6896eebb00d26ed48307fbebece1a884b17ca3fb40e3121?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libunistring-0.9.10.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/ce/ce746662b98d93511b86920011b5cafcd2eecbce4c9c40d8c52a143cdf708456?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libidn2-2.3.0.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/09/0908585cca518a83f101b2edc0417a26a4b4fc8b76e393c6f6672de6e595c914?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1g.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/19/1926679569c6af5337de812d86f4dad2b21ff883ad3a5d2cd9e8836ac5ac7ffe?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/wget-1.20.3_2.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/ef/ef65c759c5097a36323fa9c77756468649e8d1980a3a4e05695c05e39568967c?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for wget: gettext, libunistring, libidn2 and openssl@1.1
+==> Installing wget dependency: gettext
+==> Pouring gettext-0.20.2_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/gettext/0.20.2_1: 1,923 files, 18.6MB
+==> Installing wget dependency: libunistring
+==> Pouring libunistring-0.9.10.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libunistring/0.9.10: 54 files, 4.4MB
+==> Installing wget dependency: libidn2
+==> Pouring libidn2-2.3.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libidn2/2.3.0: 70 files, 727.8KB
+==> Installing wget dependency: openssl@1.1
+==> Pouring openssl@1.1-1.1.1g.catalina.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+==> Summary
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1g: 8,059 files, 18MB
+==> Installing wget
+==> Pouring wget-1.20.3_2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/wget/1.20.3_2: 50 files, 4.0MB
+==> Caveats
+==> openssl@1.1
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
++ BIN_DIR=/Users/val/.bin
++ ZSH_DIR=/Users/val/.zsh
++ UTL_DIR=/Users/val/.utils
++ CFG_DIR=/Users/val/.config
++ mkdir -p /Users/val/.bin
++ mkdir -p /Users/val/.zsh
++ mkdir -p /Users/val/.utils
++ mkdir -p /Users/val/.config
++ cp ../bin/pli ../bin/upli ../bin/vmware /Users/val/.bin
++ cp ../git/.gitconfig /Users/val
++ cp ../home/.zshrc /Users/val
++ cp ../home/.npmrc /Users/val
++ cp ../home/zsh-aliases.sh ../home/zsh-editors.sh ../home/zsh-git.sh ../home/zsh-go.sh ../home/zsh-npm.sh ../home/zsh-py.sh ../home/zsh-utils.sh /Users/val/.zsh
++ brew cask install iterm2
+==> Downloading https://iterm2.com/downloads/stable/iTerm2-3_3_10.zip
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'iterm2'.
+==> Installing Cask iterm2
+==> Moving App 'iTerm.app' to '/Applications/iTerm.app'.
+🍺  iterm2 was successfully installed!
++ ITERM_THEME_MT=https://raw.github.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
++ wget -q https://raw.github.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors -O /Users/val/.config/material-design-colors.itermcolors
++ OH_MY_ZSH=https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
++ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
++ bash
+Cloning Oh My Zsh...
+Cloning into '/Users/val/.oh-my-zsh'...
+remote: Enumerating objects: 1152, done.
+remote: Counting objects: 100% (1152/1152), done.
+remote: Compressing objects: 100% (1117/1117), done.
+remote: Total 1152 (delta 19), reused 1100 (delta 19), pack-reused 0
+Receiving objects: 100% (1152/1152), 771.07 KiB | 15.74 MiB/s, done.
+Resolving deltas: 100% (19/19), done.
+
+Looking for an existing zsh config...
+Found ~/.zshrc. Backing up to /Users/val/.zshrc.pre-oh-my-zsh
+Using the Oh My Zsh template file and adding it to ~/.zshrc.
+
+         __                                     __
+  ____  / /_     ____ ___  __  __   ____  _____/ /_
+ / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \
+/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / /
+\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/
+                        /____/                       ....is now installed!
+
+
+Please look over the ~/.zshrc file to select plugins, themes, and options.
+
+p.s. Follow us on https://twitter.com/ohmyzsh
+
+p.p.s. Get stickers, shirts, and coffee mugs at https://shop.planetargon.com/collections/oh-my-zsh
+
+Run zsh to try it out.
++ brew install make
+==> Downloading https://homebrew.bintray.com/bottles/make-4.3.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/b2/b2cbb6b854495469de4d065825c94540ad3053a1ff7c1832f4eb7781ee6b8231?__gda__=exp=1591
+######################################################################## 100.0%
+==> Pouring make-4.3.catalina.bottle.tar.gz
+==> Caveats
+GNU "make" has been installed as "gmake".
+If you need to use it as "make", you can add a "gnubin" directory
+to your PATH from your bashrc like:
+
+    PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+==> Summary
+🍺  /usr/local/Cellar/make/4.3: 15 files, 1MB
++ brew install travis
+==> Downloading https://homebrew.bintray.com/bottles/libyaml-0.2.4.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/readline-8.0.4.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/6a/6ae1c8e7c783f32bd22c6085caa4d838fed7fb386da7e40ca47b87ec9b1237d6?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/ruby-2.7.1_2.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/c9/c9ee36823a8dfe2686c6d7a3faf5061a032ed0b8e08d484f3ff2cda72d210a08?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/travis-1.9.1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/e7/e73ded3bc90d895c4210b55d99589fd5b440e0c9fe655b9aeb923b79c061af56?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for travis: libyaml, readline and ruby
+==> Installing travis dependency: libyaml
+==> Pouring libyaml-0.2.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libyaml/0.2.4: 10 files, 322.6KB
+==> Installing travis dependency: readline
+==> Pouring readline-8.0.4.catalina.bottle.tar.gz
+==> Caveats
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides BSD libedit.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> Summary
+🍺  /usr/local/Cellar/readline/8.0.4: 48 files, 1.5MB
+==> Installing travis dependency: ruby
+==> Pouring ruby-2.7.1_2.catalina.bottle.tar.gz
+==> Caveats
+By default, binaries installed by gem will be placed into:
+  /usr/local/lib/ruby/gems/2.7.0/bin
+
+You may want to add this to your PATH.
+
+ruby is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have ruby first in your PATH run:
+  echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find ruby you may need to set:
+  export LDFLAGS="-L/usr/local/opt/ruby/lib"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+==> Summary
+🍺  /usr/local/Cellar/ruby/2.7.1_2: 20,142 files, 32.2MB
+==> Installing travis
+==> Pouring travis-1.9.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/travis/1.9.1: 3,088 files, 17MB
+==> Caveats
+==> readline
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides BSD libedit.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> ruby
+By default, binaries installed by gem will be placed into:
+  /usr/local/lib/ruby/gems/2.7.0/bin
+
+You may want to add this to your PATH.
+
+ruby is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have ruby first in your PATH run:
+  echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find ruby you may need to set:
+  export LDFLAGS="-L/usr/local/opt/ruby/lib"
+  export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
++ brew cask install visual-studio-code
+==> Downloading https://update.code.visualstudio.com/1.45.1/darwin/stable
+==> Downloading from https://az764295.vo.msecnd.net/stable/5763d909d5f12fe19f215cbfdd29a91c0fa9208a/VSCode-darwin-stable.zip
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'visual-studio-code'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.45.1 of Cask visual-studio-code
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
++ brew cask install google-chrome
+==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'google-chrome'.
+==> Installing Cask google-chrome
+==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'.
+🍺  google-chrome was successfully installed!
++ brew cask install firefox
+==> Downloading https://download-installer.cdn.mozilla.net/pub/firefox/releases/76.0.1/mac/en-US/Firefox%2076.0.1.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'firefox'.
+==> Installing Cask firefox
+==> Moving App 'Firefox.app' to '/Applications/Firefox.app'.
+🍺  firefox was successfully installed!
++ brew cask install opera
+==> Downloading https://get.geo.opera.com/pub/opera/desktop/68.0.3618.125/mac/Opera_68.0.3618.125_Setup.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'opera'.
+==> Installing Cask opera
+==> Moving App 'Opera.app' to '/Applications/Opera.app'.
+🍺  opera was successfully installed!
++ brew cask install docker
+==> Downloading https://desktop.docker.com/mac/stable/45519/Docker.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'docker'.
+==> Installing Cask docker
+==> Moving App 'Docker.app' to '/Applications/Docker.app'.
+🍺  docker was successfully installed!
++ brew cask install slack
+==> Downloading https://downloads.slack-edge.com/releases/macos/4.6.0/prod/x64/Slack-4.6.0-macOS.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'slack'.
+==> Installing Cask slack
+==> Moving App 'Slack.app' to '/Applications/Slack.app'.
+🍺  slack was successfully installed!
++ brew cask install postman
+==> Downloading https://dl.pstmn.io/download/version/7.25.0/osx64
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'postman'.
+==> Installing Cask postman
+==> Moving App 'Postman.app' to '/Applications/Postman.app'.
+🍺  postman was successfully installed!
++ brew cask install rectangle
+==> Downloading https://github.com/rxhanson/Rectangle/releases/download/v0.30/Rectangle0.30.dmg
+==> Downloading from https://github-production-release-asset-2e65be.s3.amazonaws.com/193162629/99c90480-9f41-11ea-92c1-e338aca6a19f?
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'rectangle'.
+==> Installing Cask rectangle
+==> Moving App 'Rectangle.app' to '/Applications/Rectangle.app'.
+🍺  rectangle was successfully installed!
++ brew cask install keybase
+==> Downloading https://prerelease.keybase.io/darwin-updates/Keybase-5.5.0-20200526170801%2B139bb348af.zip
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'keybase'.
+==> Installing Cask keybase
+==> Moving App 'Keybase.app' to '/Applications/Keybase.app'.
+2020-06-01T23:08:15.460367-04:00 ▶ [INFO keybase install_darwin.go:669] 001 Checking /usr/local/bin/keybase (/Applications/Keybase.app/Contents/SharedSupport/bin/keybase)
+2020-06-01T23:08:15.460634-04:00 ▶ [INFO keybase install_darwin.go:697] 002 Linking /usr/local/bin/keybase to /Applications/Keybase.app/Contents/SharedSupport/bin/keybase
+2020-06-01T23:08:15.460786-04:00 ▶ [INFO keybase install_darwin.go:697] 003 Linking /usr/local/bin/git-remote-keybase to /Applications/Keybase.app/Contents/SharedSupport/bin/git-remote-keybase
+2020-06-01T23:08:15.468364-04:00 ▶ [INFO keybase launchd.go:153] 004 Nothing to stop (keybase.updater)
+2020-06-01T23:08:15.468576-04:00 ▶ [INFO keybase launchd.go:291] 005 log directory "/Users/val/Library/Logs" is writable by current user
+2020-06-01T23:08:15.468662-04:00 ▶ [INFO keybase launchd.go:302] 006 log path file "/Users/val/Library/Logs/keybase.updater.log" doesn't exist yet (should be ok)
+2020-06-01T23:08:15.468734-04:00 ▶ [ERRO keybase util.go:96] 007 Can't make parent dir /Users/val/Library/LaunchAgents
+2020-06-01T23:08:15.468817-04:00 ▶ [INFO keybase launchd.go:313] 008 error making parent directories for /Users/val/Library/LaunchAgents/keybase.updater.plist: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.468834-04:00 ▶ [WARN keybase install_darwin.go:1263] 009 error installing updater service via launchd: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.468899-04:00 ▶ [ERRO keybase install_darwin.go:1241] 00a Error installing updater service: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.468906-04:00 ▶ [INFO keybase install_darwin.go:1350] 00b falling back to starting keybase.updater process manually
+2020-06-01T23:08:15.468940-04:00 ▶ [INFO keybase install_darwin.go:1353] 00c fallback command: /Applications/Keybase.app/Contents/SharedSupport/bin/updater [/Applications/Keybase.app/Contents/SharedSupport/bin/updater -path-to-keybase=/Applications/Keybase.app/Contents/SharedSupport/bin/keybase] (env: [HOMEBREW_PROCESSOR=Intel HOMEBREW_DEFAULT_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_BREW_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_USER_AGENT=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) HOMEBREW_LIBRARY=/usr/local/Homebrew/Library HOMEBREW_COMMAND_DEPTH=2 HOMEBREW_AUTO_UPDATE_CHECKED=1 HOMEBREW_TEMP=/private/tmp TERM=xterm-256color SHELL=/bin/zsh HOMEBREW_OS_VERSION=macOS 10.15.5 HOMEBREW_BOTTLE_DOMAIN=https://homebrew.bintray.com HOMEBREW_REPOSITORY=/usr/local/Homebrew HOMEBREW_RUBY_PATH=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby HOMEBREW_GIT_CONFIG_FILE=/usr/local/Homebrew/.git/config LC_ALL=en_US.UTF-8 HOMEBREW_RUBY_WARNINGS=-W0 HOMEBREW_PATH=/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/Users/val/Code/go/bin:/Users/val/Code/go/bin USER=val HOMEBREW_CORE_GIT_REMOTE=https://github.com/Homebrew/homebrew-core SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.MKywpGWyny/Listeners HOMEBREW_MINIMUM_GIT_VERSION=2.14.3 HOMEBREW_ANALYTICS_USER_UUID=A35DFF98-83D6-494A-BC64-72346EDC5B99 HOMEBREW_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_DEFAULT_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_USER_AGENT_CURL=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) curl/7.64.1 PATH=/usr/local/Homebrew/Library/Homebrew/shims/scm:/usr/bin:/bin:/usr/sbin:/sbin HOMEBREW_EDITOR=/usr/bin/vim PWD=/Users/val/Projects/env/osx/install HOMEBREW_BREW_FILE=/usr/local/bin/brew HOMEBREW_MACOS_VERSION_NUMERIC=101505 HOMEBREW_MACOS_VERSION=10.15.5 HOMEBREW_ANALYTICS_ID=UA-76679469-1 HOMEBREW_DEFAULT_TEMP=/private/tmp HOMEBREW_PRODUCT=Homebrew SHLVL=0 HOME=/Users/val HOMEBREW_BREW_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_PREFIX=/usr/local HOMEBREW_BOTTLE_DEFAULT_DOMAIN=https://homebrew.bintray.com LOGNAME=val HOMEBREW_GIT=git HOMEBREW_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_CORE_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/homebrew-core HOMEBREW_VERSION=2.3.0 HOMEBREW_CELLAR=/usr/local/Cellar HOMEBREW_CURL=curl HOMEBREW_SYSTEM=Macintosh __CF_USER_TEXT_ENCODING=0x1F6:0x0:0x0 KEYBASE_LABEL=keybase.updater KEYBASE_SERVICE_TYPE=launchd])
+2020-06-01T23:08:15.490663-04:00 ▶ [INFO keybase install_darwin.go:1365] 00d fallback command started: /Applications/Keybase.app/Contents/SharedSupport/bin/updater, pid = 13596
+2020-06-01T23:08:15.495359-04:00 ▶ [INFO keybase launchd.go:153] 00e Nothing to stop (keybase.service)
+2020-06-01T23:08:15.499091-04:00 ▶ [INFO keybase launchd.go:153] 00f Nothing to stop (homebrew.mxcl.keybase)
+2020-06-01T23:08:15.499202-04:00 ▶ [INFO keybase launchd.go:291] 010 log directory "/Users/val/Library/Logs" is writable by current user
+2020-06-01T23:08:15.499235-04:00 ▶ [INFO keybase launchd.go:302] 011 log path file "/Users/val/Library/Logs/keybase.start.log" doesn't exist yet (should be ok)
+2020-06-01T23:08:15.499306-04:00 ▶ [ERRO keybase util.go:96] 012 Can't make parent dir /Users/val/Library/LaunchAgents
+2020-06-01T23:08:15.499337-04:00 ▶ [INFO keybase launchd.go:313] 013 error making parent directories for /Users/val/Library/LaunchAgents/keybase.service.plist: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.499350-04:00 ▶ [WARN keybase install_darwin.go:293] 014 error installing keybase service via launchd: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.499383-04:00 ▶ [ERRO keybase install_darwin.go:749] 015 Error installing Keybase service: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.499425-04:00 ▶ [INFO keybase install_darwin.go:1350] 016 falling back to starting keybase.service process manually
+2020-06-01T23:08:15.499443-04:00 ▶ [INFO keybase install_darwin.go:1353] 017 fallback command: /Applications/Keybase.app/Contents/SharedSupport/bin/keybase [/Applications/Keybase.app/Contents/SharedSupport/bin/keybase -d --log-file=/Users/val/Library/Logs/keybase.service.log service] (env: [HOMEBREW_PROCESSOR=Intel HOMEBREW_DEFAULT_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_BREW_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_USER_AGENT=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) HOMEBREW_LIBRARY=/usr/local/Homebrew/Library HOMEBREW_COMMAND_DEPTH=2 HOMEBREW_AUTO_UPDATE_CHECKED=1 HOMEBREW_TEMP=/private/tmp TERM=xterm-256color SHELL=/bin/zsh HOMEBREW_OS_VERSION=macOS 10.15.5 HOMEBREW_BOTTLE_DOMAIN=https://homebrew.bintray.com HOMEBREW_REPOSITORY=/usr/local/Homebrew HOMEBREW_RUBY_PATH=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby HOMEBREW_GIT_CONFIG_FILE=/usr/local/Homebrew/.git/config LC_ALL=en_US.UTF-8 HOMEBREW_RUBY_WARNINGS=-W0 HOMEBREW_PATH=/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/Users/val/Code/go/bin:/Users/val/Code/go/bin USER=val HOMEBREW_CORE_GIT_REMOTE=https://github.com/Homebrew/homebrew-core SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.MKywpGWyny/Listeners HOMEBREW_MINIMUM_GIT_VERSION=2.14.3 HOMEBREW_ANALYTICS_USER_UUID=A35DFF98-83D6-494A-BC64-72346EDC5B99 HOMEBREW_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_DEFAULT_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_USER_AGENT_CURL=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) curl/7.64.1 PATH=/usr/local/Homebrew/Library/Homebrew/shims/scm:/usr/bin:/bin:/usr/sbin:/sbin HOMEBREW_EDITOR=/usr/bin/vim PWD=/Users/val/Projects/env/osx/install HOMEBREW_BREW_FILE=/usr/local/bin/brew HOMEBREW_MACOS_VERSION_NUMERIC=101505 HOMEBREW_MACOS_VERSION=10.15.5 HOMEBREW_ANALYTICS_ID=UA-76679469-1 HOMEBREW_DEFAULT_TEMP=/private/tmp HOMEBREW_PRODUCT=Homebrew SHLVL=0 HOME=/Users/val HOMEBREW_BREW_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_PREFIX=/usr/local HOMEBREW_BOTTLE_DEFAULT_DOMAIN=https://homebrew.bintray.com LOGNAME=val HOMEBREW_GIT=git HOMEBREW_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_CORE_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/homebrew-core HOMEBREW_VERSION=2.3.0 HOMEBREW_CELLAR=/usr/local/Cellar HOMEBREW_CURL=curl HOMEBREW_SYSTEM=Macintosh __CF_USER_TEXT_ENCODING=0x1F6:0x0:0x0 KEYBASE_LABEL=keybase.service KEYBASE_SERVICE_TYPE=launchd KEYBASE_RUN_MODE=prod])
+2020-06-01T23:08:15.501579-04:00 ▶ [INFO keybase install_darwin.go:1365] 018 fallback command started: /Applications/Keybase.app/Contents/SharedSupport/bin/keybase, pid = 13599
+2020-06-01T23:08:15.618765-04:00 ▶ [INFO keybase launchd.go:153] 019 Nothing to stop (keybase.kbfs)
+2020-06-01T23:08:15.625609-04:00 ▶ [INFO keybase launchd.go:153] 01a Nothing to stop (homebrew.mxcl.kbfs)
+2020-06-01T23:08:15.625791-04:00 ▶ [INFO keybase launchd.go:291] 01b log directory "/Users/val/Library/Logs" is writable by current user
+2020-06-01T23:08:15.625838-04:00 ▶ [INFO keybase launchd.go:302] 01c log path file "/Users/val/Library/Logs/keybase.start.log" doesn't exist yet (should be ok)
+2020-06-01T23:08:15.625978-04:00 ▶ [ERRO keybase util.go:96] 01d Can't make parent dir /Users/val/Library/LaunchAgents
+2020-06-01T23:08:15.626007-04:00 ▶ [INFO keybase launchd.go:313] 01e error making parent directories for /Users/val/Library/LaunchAgents/keybase.kbfs.plist: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.626043-04:00 ▶ [WARN keybase install_darwin.go:342] 01f error installing kbfs service via launchd: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.626108-04:00 ▶ [ERRO keybase install_darwin.go:794] 020 error installing KBFS: mkdir /Users/val/Library/LaunchAgents: file exists
+2020-06-01T23:08:15.626150-04:00 ▶ [INFO keybase install_darwin.go:1350] 021 falling back to starting keybase.kbfs process manually
+2020-06-01T23:08:15.626192-04:00 ▶ [INFO keybase install_darwin.go:1353] 022 fallback command: /Applications/Keybase.app/Contents/SharedSupport/bin/kbfs [/Applications/Keybase.app/Contents/SharedSupport/bin/kbfs -debug -log-file=/Users/val/Library/Logs/keybase.kbfs.log -runtime-dir=/Users/val/Library/Caches/Keybase -mount-type=none /Volumes/Keybase (val)] (env: [HOMEBREW_PROCESSOR=Intel HOMEBREW_DEFAULT_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_BREW_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_USER_AGENT=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) HOMEBREW_LIBRARY=/usr/local/Homebrew/Library HOMEBREW_COMMAND_DEPTH=2 HOMEBREW_AUTO_UPDATE_CHECKED=1 HOMEBREW_TEMP=/private/tmp TERM=xterm-256color SHELL=/bin/zsh HOMEBREW_OS_VERSION=macOS 10.15.5 HOMEBREW_BOTTLE_DOMAIN=https://homebrew.bintray.com HOMEBREW_REPOSITORY=/usr/local/Homebrew HOMEBREW_RUBY_PATH=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby HOMEBREW_GIT_CONFIG_FILE=/usr/local/Homebrew/.git/config LC_ALL=en_US.UTF-8 HOMEBREW_RUBY_WARNINGS=-W0 HOMEBREW_PATH=/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/val/.yarn/bin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/sbin:/usr/local/opt/qt/bin:/Users/val/Code/go/bin:/Users/val/Code/go/bin USER=val HOMEBREW_CORE_GIT_REMOTE=https://github.com/Homebrew/homebrew-core SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.MKywpGWyny/Listeners HOMEBREW_MINIMUM_GIT_VERSION=2.14.3 HOMEBREW_ANALYTICS_USER_UUID=A35DFF98-83D6-494A-BC64-72346EDC5B99 HOMEBREW_CACHE=/Users/val/Library/Caches/Homebrew HOMEBREW_DEFAULT_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_USER_AGENT_CURL=Homebrew/2.3.0 (Macintosh; Intel Mac OS X 10.15.5) curl/7.64.1 PATH=/usr/local/Homebrew/Library/Homebrew/shims/scm:/usr/bin:/bin:/usr/sbin:/sbin HOMEBREW_EDITOR=/usr/bin/vim PWD=/Users/val/Projects/env/osx/install HOMEBREW_BREW_FILE=/usr/local/bin/brew HOMEBREW_MACOS_VERSION_NUMERIC=101505 HOMEBREW_MACOS_VERSION=10.15.5 HOMEBREW_ANALYTICS_ID=UA-76679469-1 HOMEBREW_DEFAULT_TEMP=/private/tmp HOMEBREW_PRODUCT=Homebrew SHLVL=0 HOME=/Users/val HOMEBREW_BREW_GIT_REMOTE=https://github.com/Homebrew/brew HOMEBREW_PREFIX=/usr/local HOMEBREW_BOTTLE_DEFAULT_DOMAIN=https://homebrew.bintray.com LOGNAME=val HOMEBREW_GIT=git HOMEBREW_LOGS=/Users/val/Library/Logs/Homebrew HOMEBREW_CORE_DEFAULT_GIT_REMOTE=https://github.com/Homebrew/homebrew-core HOMEBREW_VERSION=2.3.0 HOMEBREW_CELLAR=/usr/local/Cellar HOMEBREW_CURL=curl HOMEBREW_SYSTEM=Macintosh __CF_USER_TEXT_ENCODING=0x1F6:0x0:0x0 KEYBASE_LABEL=keybase.kbfs KEYBASE_SERVICE_TYPE=launchd KEYBASE_RUN_MODE=prod])
+2020-06-01T23:08:15.676830-04:00 ▶ [INFO keybase install_darwin.go:1365] 023 fallback command started: /Applications/Keybase.app/Contents/SharedSupport/bin/kbfs, pid = 13602
+2020-06-01T23:08:15.779899-04:00 ▶ [INFO keybase install_darwin.go:834] 024 Installing KBNM NativeMessaging whitelists for binary: /Applications/Keybase.app/Contents/SharedSupport/bin/kbnm
+🍺  keybase was successfully installed!
++ brew cask install spotify
+==> Downloading https://download.scdn.co/Spotify.dmg
+######################################################################## 100.0%
+==> No SHA-256 checksum defined for Cask 'spotify', skipping verification.
+==> Installing Cask spotify
+==> Moving App 'Spotify.app' to '/Applications/Spotify.app'.
+🍺  spotify was successfully installed!
++ brew cask install vlc
+==> Downloading https://get.videolan.org/vlc/3.0.10/macosx/vlc-3.0.10.dmg
+==> Downloading from https://mirror.csclub.uwaterloo.ca/vlc/vlc/3.0.10/macosx/vlc-3.0.10.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'vlc'.
+==> Installing Cask vlc
+==> Moving App 'VLC.app' to '/Applications/VLC.app'.
+==> Linking Binary 'vlc.wrapper.sh' to '/usr/local/bin/vlc'.
+🍺  vlc was successfully installed!
++ brew install git
+==> Downloading https://homebrew.bintray.com/bottles/pcre2-10.35.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/6a/6a1e59a5db23d684f92d2bf695601d1b466f3e9d5407f704ba4679d885d13cef?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/git-2.26.2_1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/87/8796a6c37723ae33d22fe5bfc249b9135b309c87ec2b41e6025d726df1a2dee6?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for git: pcre2
+==> Installing git dependency: pcre2
+==> Pouring pcre2-10.35.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/pcre2/10.35: 230 files, 6.0MB
+==> Installing git
+==> Pouring git-2.26.2_1.catalina.bottle.tar.gz
+==> Caveats
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completions and functions have been installed to:
+  /usr/local/share/zsh/site-functions
+
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/git
+==> Summary
+🍺  /usr/local/Cellar/git/2.26.2_1: 1,471 files, 46.4MB
+==> Caveats
+==> git
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completions and functions have been installed to:
+  /usr/local/share/zsh/site-functions
+
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/git
++ brew install git-gui
+==> Downloading https://homebrew.bintray.com/bottles/tcl-tk-8.6.10.catalina.bottle.1.tar.gz
+==> Downloading from https://akamai.bintray.com/47/4740b30b97f0308ecc59c1308945c38ddca5d3da528d779f38199a2dad905fa1?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/git-gui-2.26.2.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/27/272b5e5ab0d3f511f640c743053ed8f78bc291e011fd94fa3b500f1e235aefe7?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for git-gui: tcl-tk
+==> Installing git-gui dependency: tcl-tk
+==> Pouring tcl-tk-8.6.10.catalina.bottle.1.tar.gz
+==> Caveats
+tcl-tk is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have tcl-tk first in your PATH run:
+  echo 'export PATH="/usr/local/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find tcl-tk you may need to set:
+  export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+  export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
+==> Summary
+🍺  /usr/local/Cellar/tcl-tk/8.6.10: 3,036 files, 51MB
+==> Installing git-gui
+==> Pouring git-gui-2.26.2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/git-gui/2.26.2: 79 files, 2.2MB
+==> Caveats
+==> tcl-tk
+tcl-tk is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have tcl-tk first in your PATH run:
+  echo 'export PATH="/usr/local/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find tcl-tk you may need to set:
+  export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+  export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
++ GIT_COMPLETION=https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
++ wget -q https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh -O /Users/val/.zsh/git-completion.zsh
++ brew cask install postgres
+==> Downloading https://github.com/PostgresApp/PostgresApp/releases/download/v2.3.5/Postgres-2.3.5-10-11-12.dmg
+==> Downloading from https://github-production-release-asset-2e65be.s3.amazonaws.com/3946572/ea696500-9605-11ea-851a-45bd33de3534?X-
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'postgres'.
+==> Installing Cask postgres
+==> Moving App 'Postgres.app' to '/Applications/Postgres.app'.
+🍺  postgres was successfully installed!
++ brew cask install postgis
+Error: Cask 'postgis' is unavailable: No Cask with this name exists.
++ brew cask install postico
+==> Downloading https://eggerapps-downloads.s3.amazonaws.com/postico-1.5.13.zip
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'postico'.
+==> Installing Cask postico
+==> Moving App 'Postico.app' to '/Applications/Postico.app'.
+🍺  postico was successfully installed!
++ initdb /usr/local/var/postgres -E utf8
+auto.sh: line 80: initdb: command not found
++ ln -sfv '/usr/local/opt/postgresql/*.plist' /Users/val/Library/LaunchAgents
+/Users/val/Library/LaunchAgents -> /usr/local/opt/postgresql/*.plist
++ brew services start postgresql
+==> Tapping homebrew/services
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-services'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 788 (delta 2), reused 5 (delta 2), pack-reused 777
+Receiving objects: 100% (788/788), 216.01 KiB | 2.54 MiB/s, done.
+Resolving deltas: 100% (319/319), done.
+Tapped 1 command (40 files, 294.3KB).
+Error: Formula `postgresql` is not installed.
++ brew install libmemcached
+==> Downloading https://homebrew.bintray.com/bottles/libmemcached-1.0.18_2.catalina.bottle.1.tar.gz
+==> Downloading from https://akamai.bintray.com/24/24c7d9597b28d79f50f86777aa506b1955737d9e3298e1d79c3ad95b74fb66f8?__gda__=exp=1591
+######################################################################## 100.0%
+==> Pouring libmemcached-1.0.18_2.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/libmemcached/1.0.18_2: 231 files, 1.8MB
++ LIBMEMCACHED=/opt/local
++ pip install pylibmc
+auto.sh: line 87: pip: command not found
++ brew install node
+==> Downloading https://homebrew.bintray.com/bottles/icu4c-67.1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/2d/2d1e91b5127f66e7941790c004817c94c892725c88f84f1e4c37297fcbc0c72f?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/node-14.3.0_1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/96/960b6945191ba938cc0554cd43eb650488b03d76db1b5fcc1160e6997831afbf?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for node: icu4c
+==> Installing node dependency: icu4c
+==> Pouring icu4c-67.1.catalina.bottle.tar.gz
+==> Caveats
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+==> Summary
+🍺  /usr/local/Cellar/icu4c/67.1: 258 files, 71.2MB
+==> Installing node
+==> Pouring node-14.3.0_1.catalina.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+==> Summary
+🍺  /usr/local/Cellar/node/14.3.0_1: 4,659 files, 60.8MB
+==> Caveats
+==> icu4c
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+==> node
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
++ brew install yarn
+==> Downloading https://yarnpkg.com/downloads/1.22.4/yarn-v1.22.4.tar.gz
+==> Downloading from https://github-production-release-asset-2e65be.s3.amazonaws.com/49970642/487f6380-61e3-11ea-8294-0d743f488ef6?X
+######################################################################## 100.0%
+🍺  /usr/local/Cellar/yarn/1.22.4: 14 files, 5MB, built in 1 second
++ NVM=https://raw.github.com/nvm-sh/nvm/v0.35.2/install.sh
++ curl -fsSL https://raw.github.com/nvm-sh/nvm/v0.35.2/install.sh
++ bash
+=> Downloading nvm from git to '/Users/val/.nvm'
+=> Cloning into '/Users/val/.nvm'...
+remote: Enumerating objects: 288, done.
+remote: Counting objects: 100% (288/288), done.
+remote: Compressing objects: 100% (254/254), done.
+remote: Total 288 (delta 34), reused 102 (delta 22), pack-reused 0
+Receiving objects: 100% (288/288), 146.48 KiB | 3.25 MiB/s, done.
+Resolving deltas: 100% (34/34), done.
+=> Compressing and cleaning up git repository
+
+=> Appending nvm source string to /Users/val/.zshrc
+=> Appending bash_completion source string to /Users/val/.zshrc
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
++ export PIP_REQUIRE_VIRTUALENV=
++ PIP_REQUIRE_VIRTUALENV=
++ brew install python3
+==> Downloading https://homebrew.bintray.com/bottles/gdbm-1.18.1.catalina.bottle.1.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.32.1.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/fa/faebdccaba17c8d4579a7f72cc1d1874fdd63b8a8d1d21d7c5a2c9585cc59cfa?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/xz-5.2.5.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/2d/2dcc8e0121c934d1e34ffdb37fcd70f0f7b5c2f4755f2f7cbcf360e9e54cb43b?__gda__=exp=1591
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/python-3.7.7.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/ac/acd595852aecc2bfa46c57d86db716e64d57bb2753c45ff7f745b46c7655dd65?__gda__=exp=1591
+######################################################################## 100.0%
+==> Installing dependencies for python: gdbm, sqlite and xz
+==> Installing python dependency: gdbm
+==> Pouring gdbm-1.18.1.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/gdbm/1.18.1: 20 files, 602.8KB
+==> Installing python dependency: sqlite
+==> Pouring sqlite-3.32.1.catalina.bottle.tar.gz
+==> Caveats
+sqlite is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.32.1: 11 files, 4MB
+==> Installing python dependency: xz
+==> Pouring xz-5.2.5.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/xz/5.2.5: 92 files, 1.1MB
+==> Installing python
+==> Pouring python-3.7.7.catalina.bottle.tar.gz
+==> /usr/local/Cellar/python/3.7.7/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/usr/local/Cell
+==> /usr/local/Cellar/python/3.7.7/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/usr/local/Cell
+==> /usr/local/Cellar/python/3.7.7/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-scripts=/usr/local/Cell
+==> Caveats
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> Summary
+🍺  /usr/local/Cellar/python/3.7.7: 4,006 files, 61.2MB
+==> Caveats
+==> sqlite
+sqlite is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+==> python
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
++ pip install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.0.21-py2.py3-none-any.whl (4.7 MB)
+     |████████████████████████████████| 4.7 MB 1.9 MB/s 
+Collecting importlib-metadata<2,>=0.12; python_version < "3.8"
+  Downloading importlib_metadata-1.6.0-py2.py3-none-any.whl (30 kB)
+Collecting distlib<1,>=0.3.0
+  Downloading distlib-0.3.0.zip (571 kB)
+     |████████████████████████████████| 571 kB 42.5 MB/s 
+Collecting six<2,>=1.9.0
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting filelock<4,>=3.0.0
+  Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
+Collecting appdirs<2,>=1.4.3
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.1.0-py3-none-any.whl (4.9 kB)
+Building wheels for collected packages: distlib
+  Building wheel for distlib (setup.py) ... done
+  Created wheel for distlib: filename=distlib-0.3.0-py3-none-any.whl size=340427 sha256=c78bb7d7265140ecc9afd30b8909433f45112c180e54ae17fd984804c3aca87c
+  Stored in directory: /Users/val/Library/Caches/pip/wheels/a2/19/da/a15d4e2bedf3062c739b190d5cb5b7b2ecfbccb6b0d93c861b
+Successfully built distlib
+Installing collected packages: zipp, importlib-metadata, distlib, six, filelock, appdirs, virtualenv
+Successfully installed appdirs-1.4.4 distlib-0.3.0 filelock-3.0.12 importlib-metadata-1.6.0 six-1.15.0 virtualenv-20.0.21 zipp-3.1.0
++ pip install virtualenvwrapper
+Collecting virtualenvwrapper
+  Downloading virtualenvwrapper-4.8.4.tar.gz (334 kB)
+     |████████████████████████████████| 334 kB 2.0 MB/s 
+Requirement already satisfied: virtualenv in /usr/local/lib/python3.7/site-packages (from virtualenvwrapper) (20.0.21)
+Collecting virtualenv-clone
+  Downloading virtualenv_clone-0.5.4-py2.py3-none-any.whl (6.6 kB)
+Collecting stevedore
+  Downloading stevedore-1.32.0-py2.py3-none-any.whl (43 kB)
+     |████████████████████████████████| 43 kB 3.6 MB/s 
+Requirement already satisfied: appdirs<2,>=1.4.3 in /usr/local/lib/python3.7/site-packages (from virtualenv->virtualenvwrapper) (1.4.4)
+Requirement already satisfied: six<2,>=1.9.0 in /usr/local/lib/python3.7/site-packages (from virtualenv->virtualenvwrapper) (1.15.0)
+Requirement already satisfied: distlib<1,>=0.3.0 in /usr/local/lib/python3.7/site-packages (from virtualenv->virtualenvwrapper) (0.3.0)
+Requirement already satisfied: importlib-metadata<2,>=0.12; python_version < "3.8" in /usr/local/lib/python3.7/site-packages (from virtualenv->virtualenvwrapper) (1.6.0)
+Requirement already satisfied: filelock<4,>=3.0.0 in /usr/local/lib/python3.7/site-packages (from virtualenv->virtualenvwrapper) (3.0.12)
+Collecting pbr!=2.1.0,>=2.0.0
+  Using cached pbr-5.4.5-py2.py3-none-any.whl (110 kB)
+Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/site-packages (from importlib-metadata<2,>=0.12; python_version < "3.8"->virtualenv->virtualenvwrapper) (3.1.0)
+Building wheels for collected packages: virtualenvwrapper
+  Building wheel for virtualenvwrapper (setup.py) ... done
+  Created wheel for virtualenvwrapper: filename=virtualenvwrapper-4.8.4-py2.py3-none-any.whl size=24850 sha256=9fa0108675447f2d864ecd4d9136374021e69e85c5b6c5b358b36c2335b0a982
+  Stored in directory: /Users/val/Library/Caches/pip/wheels/5d/96/35/0ead94dd427ef8464cc1b4c6641d81c1512decd146d437bd5d
+Successfully built virtualenvwrapper
+Installing collected packages: virtualenv-clone, pbr, stevedore, virtualenvwrapper
+Successfully installed pbr-5.4.5 stevedore-1.32.0 virtualenv-clone-0.5.4 virtualenvwrapper-4.8.4
++ brew install libjpeg
+==> Downloading https://homebrew.bintray.com/bottles/jpeg-9d.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/8f/8f7b82a952fb3937889c7f22da1403e5338cd320495917eb26b0c5b2e614791c?__gda__=exp=1591
+######################################################################## 100.0%
+==> Pouring jpeg-9d.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/jpeg/9d: 21 files, 775.2KB
++ brew install libtiff
+==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.1.0.catalina.bottle.tar.gz
+==> Downloading from https://akamai.bintray.com/44/449bd9123e73e4c4eab85b77322d769cc9df0f6adab05e9b9319b012d1215a68?__gda__=exp=1591
+######################################################################## 100.0%
+==> Pouring libtiff-4.1.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.1.0: 247 files, 3.7MB
++ brew install ibpng
+Error: No available formula with the name "ibpng" 
+==> Searching for a previously deleted formula (in the last month)...
+Error: No previously deleted formula found.
+==> Searching for similarly named formulae...
+This similarly named formula was found:
+libpng
+To install it, run:
+  brew install libpng
+==> Searching taps...
+==> Searching taps on GitHub...
+Error: No formulae found in taps.
++ brew cleanup
+Pruned 0 symbolic links and 8 directories from /usr/local
++ export PIP_REQUIRE_VIRTUALENV=true
++ PIP_REQUIRE_VIRTUALENV=true
+zsh: command not found: __git_ps1 
