@@ -19,6 +19,7 @@ BIN_DIR="${HOME}/.bin"                  # Private Bin
 ZSH_DIR="${HOME}/.zsh"                  # Directory for zsh scripts
 UTL_DIR="${HOME}/.utils"                # Directory for utility scripts
 CFG_DIR="${HOME}/.config"               # Directory for config files
+VIR_ENV="${HOME}/Sandbox/.venv"         # Virtual env directory
 
 # Required Directories
 #######################################
@@ -26,6 +27,7 @@ mkdir -p ${BIN_DIR}
 mkdir -p ${ZSH_DIR}
 mkdir -p ${UTL_DIR}
 mkdir -p ${CFG_DIR}
+mkdir -p ${VIR_ENV}
 
 # Required Scripts & Configurations
 #######################################
@@ -34,6 +36,7 @@ cp ../git/.gitconfig ${HOME}
 cp ../home/.zshrc ${HOME}
 cp ../home/.npmrc ${HOME}
 cp ../home/zsh-* ${ZSH_DIR}
+cp ../py/venv/.pypirc ${HOME}
 
 # Iterm & Friends
 #######################################
@@ -109,6 +112,18 @@ brew install postico                      # Postgresql Mac Client
 initdb /usr/local/var/postgres -E utf8
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 brew services start postgresql
+
+# Restore scripts
+# .zshrc runs after each terminal opens
+# .zprofile runs on each user login once
+# .zshrc is rerwitten by the above scripts
+#######################################
+cp ${HOME}/.zshrc ${HOME}/.zprofile
+cp ../home/.zprofile ${HOME}/.zshrc
+
+# Finalize Python & Virtual Env
+#######################################
+cp ../py/venv/postactivate ${VIR_ENV}
 
 # Clean ups
 #######################################
