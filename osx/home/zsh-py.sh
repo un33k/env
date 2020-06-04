@@ -1,6 +1,7 @@
 # Python configuration
 
-THIS_HOST=$(hostname -s)
+# Set python 3 as default for my user
+export PATH="/usr/local/opt/python/libexec/bin:/usr/local/sbin:$PATH"
 
 ############ Python, VirtualEnv & VirtualEnvWrapper ##########
 PY2=/usr/local/bin/python2

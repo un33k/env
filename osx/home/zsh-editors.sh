@@ -1,4 +1,7 @@
-# Visual Basic Code
+# Default Editor
+export EDITOR=/usr/bin/vim
+
+# Visual Basic Code IDE
 code () {
     if [[ $# = 0 ]]
     then
@@ -9,5 +12,5 @@ code () {
     fi
 }
 
-# Sublime Text
+# Sublime Text IDE
 alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "
