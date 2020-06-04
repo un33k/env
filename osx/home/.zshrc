@@ -35,3 +35,8 @@ fi
 if [ -f ~/.zsh/zsh-npm.sh ]; then
   . ~/.zsh/zsh-npm.sh
 fi
+
+# Run zprofile
+if [ -f ~/.zprofile ]; then
+  . ~/.zprofile
+fi

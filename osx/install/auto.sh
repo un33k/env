@@ -119,7 +119,7 @@ brew services start postgresql
 # .zshrc is rerwitten by the above scripts
 #######################################
 cp ${HOME}/.zshrc ${HOME}/.zprofile
-cp ../home/.zprofile ${HOME}/.zshrc
+cp ../home/.zshrc ${HOME}/
 
 # Finalize Python & Virtual Env
 #######################################
