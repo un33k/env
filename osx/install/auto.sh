@@ -58,6 +58,7 @@ brew install travis                     # Continous Integration (CI)
 #######################################
 brew cask install visual-studio-code      # Visual Studio Code (IDE)
 brew cask install google-chrome           # Google Chrome (Browser)
+brew cask install brave-browser           # Brave (Browser)
 brew cask install firefox                 # Firefox (Browser)
 brew cask install opera                   # Opera (Browser)
 brew cask install docker                  # Container Platform
