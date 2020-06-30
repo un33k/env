@@ -103,13 +103,13 @@ pip install virtualenvwrapper           # Virtual Env Wrapper
 #######################################
 brew install libjpeg
 brew install libtiff
-brew install ibpng
+brew install libpng
 
 # Postgres & Friends
 #######################################
 brew install postgres                     # Postgresql (Relational Database)
 brew install postgis                      # Postgresql GIS extension
-brew install postico                      # Postgresql Mac Client
+brew cask install postico                 # Postgresql Mac Client
 initdb /usr/local/var/postgres -E utf8
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 brew services start postgresql
