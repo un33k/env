@@ -1,6 +1,9 @@
 # Local scripts
 LOCAL_BIN=~/.bin
 
+# ZSH command completion case
+CASE_SENSITIVE="true" 
+
 # Editor & IDEs
 if [ -f ~/.zsh/zsh-editors.sh ]; then
   . ~/.zsh/zsh-editors.sh
