@@ -118,7 +118,7 @@ brew services start postgresql
 # Restore scripts
 # .zshrc runs after each terminal opens
 # .zprofile runs on each user login once
-# .zshrc is rerwitten by the above scripts
+# .zshrc is rwitten by this scripts & ohmyzsh
 #######################################
 cp ${HOME}/.zshrc ${HOME}/.zprofile
 cp ../home/.zshrc ${HOME}/
