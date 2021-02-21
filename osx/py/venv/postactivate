@@ -2,7 +2,7 @@
 # This hook is run after every virtualenv is activated.
 
 MY_PROJ=$(basename $VIRTUAL_ENV)
-PROJ_PATH=~/Sandbox/workon/$MY_PROJ
+PROJ_PATH=~/Projects/workon/$MY_PROJ
 mkdir -p $PROJ_PATH > /dev/null 2>&1
 echo "Working on: $PROJ_PATH"
 cd $PROJ_PATH

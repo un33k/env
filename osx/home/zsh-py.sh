@@ -10,7 +10,7 @@ PY3=/usr/local/bin/python3
 PY3DIST=/usr/local/lib/python3.7/site-packages
 
 export PIP_REQUIRE_VIRTUALENV=true
-export VHOME_DIR=$HOME/Sandbox
+export VHOME_DIR=$HOME/Projects
 export WORKON_HOME=$VHOME_DIR/.venv
 export PIP_DOWNLOAD_CACHE=$VHOME_DIR/.pip_cache
 mkdir -p $WORKON_HOME > /dev/null 2>& 1
