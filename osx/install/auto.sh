@@ -82,8 +82,8 @@ wget -q ${GIT_COMPLETION} -O ${ZSH_DIR}/git-completion.zsh
 
 # MemCache & Friends
 #######################################
+export LIBMEMCACHED=/opt/local
 brew install libmemcached
-LIBMEMCACHED=/opt/local pip install pylibmc
 
 # NodeJs & Friends
 #######################################
@@ -98,6 +98,7 @@ export PIP_REQUIRE_VIRTUALENV=''
 brew install python3                 # Python 3+
 pip install virtualenv               # Virtual Env
 pip install virtualenvwrapper        # Virtual Env Wrapper
+pip install pylibmc                  # Python Client for Memcache
 
 # ImageLibs & Friends (required for pillow)
 #######################################
