@@ -41,7 +41,7 @@ fi
 
 # Run zprofile
 # Note: if this is copied into .zprofile - don't run it
-if [ -f ~/.zprofile ] && [[ "$(basename $0)" != ".zprofile" ]]; then
+if [ -f ~/.zprofile ] && [[ "${(%):-%x}" != *".zprofile" ]]; then
   . ~/.zprofile
 fi
 
