@@ -40,6 +40,8 @@ if [ -f ~/.zsh/zsh-npm.sh ]; then
 fi
 
 # Run zprofile
-if [ -f ~/.zprofile ]; then
+# Note: if this is copied into .zprofile - don't run it
+if [ -f ~/.zprofile ] && [[ "${(%):-%x}" != *".zprofile" ]]; then
   . ~/.zprofile
 fi
+
