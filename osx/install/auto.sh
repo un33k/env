@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Github
 #######################################
@@ -8,7 +8,6 @@ GITHUB="https://raw.github.com"
 #######################################
 HOME_BREW="${GITHUB}/Homebrew/install/master/install.sh"
 curl -fsSL ${HOME_BREW} | bash
-brew tap homebrew/cask               # Default Cask
 brew doctor                          # Brew Doctor
 brew update                          # Brew Update
 brew install wget                    # Wget Utils
