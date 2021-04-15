@@ -18,7 +18,7 @@ BIN_DIR="${HOME}/.bin"               # Private Bin
 ZSH_DIR="${HOME}/.zsh"               # Directory for zsh scripts
 UTL_DIR="${HOME}/.utils"             # Directory for utility scripts
 CFG_DIR="${HOME}/.config"            # Directory for config files
-VIR_ENV="${HOME}/Projects/.venv"     # Virtual env directory
+VIR_ENV="${HOME}/Sandbox/.venv"      # Virtual env directory
 
 # Required Directories
 #######################################
@@ -69,7 +69,6 @@ brew install spotify                 # Music Platform
 brew install vlc                     # Media Player
 brew install alfred                  # Alfred Productivity
 brew install caffeine                # Prevents Mac Sleeping
-brew install slack                   # Team communiction tool
 
 
 # Git & Friends
@@ -117,10 +116,10 @@ brew services start postgresql
 # Restore scripts
 # .zshrc runs after each terminal opens
 # .zprofile runs on each user login once
-# .zshrc is rwitten by this scripts & ohmyzsh
+# .zshrc is rewitten by this scripts & ohmyzsh
 #######################################
-cp ${HOME}/.zshrc ${HOME}/.zprofile
-cp ../home/.zshrc ${HOME}/
+cat ${HOME}/.enable >> ${HOME}/.zprofile
+cat ${HOME}/.enable >> ${HOME}/.zshrc
 
 # Finalize Python & Virtual Env
 #######################################

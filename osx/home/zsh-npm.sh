@@ -1,4 +1,4 @@
-export NPM_TOKEN=
+export NPM_TOKEN="add-your-npmjs-token-here"
 
 # You like yarn over npm
 export PATH="$HOME/.yarn/bin:$PATH"

@@ -1,0 +1,5 @@
+
+# Run custom zsh 
+if [ -f ~/.zsh/zsh-init.sh ]; then
+  . ~/.zsh/zsh-init.sh
+fi
