@@ -33,6 +33,7 @@ sudo -u postgres createuser --superuser $USER
 # postgres=# create database mydb;
 # postgres=# create user <myuser> with encrypted password '<mypass>';
 # postgres=# grant all privileges on database <mydb> to <myuser>;
+# postgre# alter user <myuser> createdb;
 
 # to trust local user on localhost
 sudo vi /usr/local/var/postgres/pg_hba.conf
