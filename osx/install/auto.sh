@@ -87,7 +87,7 @@ brew install libmemcached
 #######################################
 brew install node                    # Node JS Runtime Env
 brew install yarn                    # Node Package Manager
-NVM="${GITHUB}/nvm-sh/nvm/v0.35.2/install.sh"
+NVM="${GITHUB}/nvm-sh/nvm/v0.38.2/install.sh"
 curl -fsSL ${NVM} | bash
 
 # Python & Friends
