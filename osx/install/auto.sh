@@ -94,9 +94,9 @@ curl -fsSL ${NVM} | bash
 #######################################
 export PIP_REQUIRE_VIRTUALENV=''
 brew install python3                 # Python 3+
-pip install virtualenv               # Virtual Env
-pip install virtualenvwrapper        # Virtual Env Wrapper
-pip install pylibmc                  # Python Client for Memcache
+pip3 install virtualenv               # Virtual Env
+pip3 install virtualenvwrapper        # Virtual Env Wrapper
+pip3 install pylibmc                  # Python Client for Memcache
 
 # ImageLibs & Friends (required for pillow)
 #######################################
