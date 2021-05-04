@@ -11,6 +11,3 @@ code () {
         open -a "Visual Studio Code" "$F"
     fi
 }
-
-# Sublime Text IDE
-alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "

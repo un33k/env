@@ -1,13 +1,13 @@
 # This formula is keg-only, which means it was not symlinked into /usr/local,
 # because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
-export CFLAGS="$CFLAGS -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export CFLAGS="$CFLAGS -I/opt/homebrew/opt/openssl/include -L/opt/homebrew/opt/openssl/lib"
+export PATH="/opt/homebrew/opt/openssl/bin:$PATH"
 
 # qt related
-export PATH="/usr/local/opt/qt/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/qt/lib"
-export CPPFLAGS="-I/usr/local/opt/qt/include"
+export PATH="/opt/homebrew/opt/qt/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/qt/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/qt/include"
 
 # For compilers to find readline you may need to set
-export LDFLAGS="-L/usr/local/opt/readline/lib"
-export CPPFLAGS="-I/usr/local/opt/readline/include"
+export LDFLAGS="-L/opt/homebrew/opt/readline/include/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/readline/include/include"
