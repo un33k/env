@@ -80,7 +80,6 @@ wget -q ${GIT_COMPLETION} -O ${ZSH_DIR}/git-completion.zsh
 
 # MemCache & Friends
 #######################################
-export LIBMEMCACHED=/opt/local
 brew install libmemcached
 
 # NodeJs & Friends
@@ -109,8 +108,8 @@ brew install libpng
 brew install postgres                # Postgresql (Relational Database)
 brew install postgis                 # Postgresql GIS extension
 brew install postico                 # Postgresql Mac Client
-initdb /usr/local/var/postgres -E utf8
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+initdb /opt/homebrew/var/postgres -E utf8
+ln -sfv /opt/homebrew/opt/postgres/*.plist ~/Library/LaunchAgents
 brew services start postgresql
 
 # Restore scripts
