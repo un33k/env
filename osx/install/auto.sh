@@ -1,5 +1,18 @@
 #!/usr/bin/env zsh
 
+BREW_DIR="/opt/homebrew"
+
+if [ "$1" == "intel" ]; then
+  BREW_DIR="/usr/local"
+elif [ "$1" == "apple" ]; then
+  BREW_DIR="/opt/homebrew"
+else
+  echo "usage: bash setup.sh <apple | intel>"
+  exit 1
+fi
+
+echo "Arch is set to ($1), brew directory is set to (${BREW_DIR})."
+
 # Github
 #######################################
 GITHUB="https://raw.github.com"
