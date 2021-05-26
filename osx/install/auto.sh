@@ -130,9 +130,9 @@ brew services start postgresql
 # .zprofile runs on each user login once
 # .zshrc is rewitten by this scripts & ohmyzsh
 #######################################
-cat ${HOME}/.enable >> ${HOME}/.zprofile
+cat ../home/enable >> ${HOME}/.zprofile
 cat "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
-cat ${HOME}/.enable >> ${HOME}/.zshrc
+cat ../home/enable >> ${HOME}/.zshrc
 
 # Finalize Python & Virtual Env
 #######################################
