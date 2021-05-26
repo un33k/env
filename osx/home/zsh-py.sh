@@ -1,10 +1,10 @@
 # Python configuration
 
 # Set python 3 as default for my user
-export PATH="/opt/homebrew/Cellar/python@3.9/3.9.4/libexec/bin:/usr/local/sbin:$PATH"
+export PATH="${BREW_DIR}/Cellar/python@3.9/3.9.4/libexec/bin:/usr/local/sbin:$PATH"
 
 ############ Python, VirtualEnv & VirtualEnvWrapper ##########
-PY3="/opt/homebrew/bin/python3"
+PY3="${BREW_DIR}/bin/python3"
 
 export PIP_REQUIRE_VIRTUALENV=true
 export VHOME_DIR=$HOME/Sandbox
@@ -15,7 +15,7 @@ mkdir -p $WORKON_HOME > /dev/null 2>& 1
 export VIRTUALENVWRAPPER_PYTHON=$PY3
 export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME
 export VIRTUALENVWRAPPER_LOG_DIR=$WORKON_HOME
-source /opt/homebrew/bin/virtualenvwrapper.sh
+source ${BREW_DIR}/bin/virtualenvwrapper.sh
 
 ############## virtualevnwrapper ############
 alias v.mk='mkvirtualenv --python=$PY3 '

@@ -108,8 +108,8 @@ brew install libpng
 brew install postgres                # Postgresql (Relational Database)
 brew install postgis                 # Postgresql GIS extension
 brew install postico                 # Postgresql Mac Client
-initdb /opt/homebrew/var/postgres -E utf8
-ln -sfv /opt/homebrew/opt/postgres/*.plist ~/Library/LaunchAgents
+initdb ${BREW_DIR}/var/postgres -E utf8
+ln -sfv ${BREW_DIR}/opt/postgres/*.plist ~/Library/LaunchAgents
 brew services start postgresql
 
 # Restore scripts
@@ -118,6 +118,7 @@ brew services start postgresql
 # .zshrc is rewitten by this scripts & ohmyzsh
 #######################################
 cat ${HOME}/.enable >> ${HOME}/.zprofile
+cat "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
 cat ${HOME}/.enable >> ${HOME}/.zshrc
 
 # Finalize Python & Virtual Env
