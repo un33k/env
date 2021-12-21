@@ -4,6 +4,9 @@ LOCAL_BIN=~/.bin
 # ZSH command completion case
 CASE_SENSITIVE="true" 
 
+# Default is opt out brew analytics
+HOMEBREW_NO_ANALYTICS=1
+
 # Editor & IDEs
 if [ -f ~/.zsh/zsh-editors.sh ]; then
   . ~/.zsh/zsh-editors.sh
