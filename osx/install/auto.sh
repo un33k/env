@@ -68,20 +68,20 @@ brew install travis                  # Continous Integration (CI)
 
 # Extra
 #######################################
-brew install visual-studio-code      # Visual Studio Code (IDE)
-brew install google-chrome           # Google Chrome (Browser)
-brew install brave-browser           # Brave (Browser)
-brew install firefox                 # Firefox (Browser)
-brew install opera                   # Opera (Browser)
-brew install docker                  # Container Platform
-brew install slack                   # Collaboration Platform
-brew install postman                 # API Development Tool
-brew install rectangle               # Move & Resize & Grap Windows on MacOS
-brew install keybase                 # Messages & Chats Encryption
-brew install spotify                 # Music Platform
-brew install vlc                     # Media Player
-brew install alfred                  # Alfred Productivity
-brew install caffeine                # Prevents Mac Sleeping
+# brew install visual-studio-code      # Visual Studio Code (IDE)
+# brew install google-chrome           # Google Chrome (Browser)
+# brew install brave-browser           # Brave (Browser)
+# brew install firefox                 # Firefox (Browser)
+# brew install opera                   # Opera (Browser)
+# brew install docker                  # Container Platform
+# brew install slack                   # Collaboration Platform
+# brew install postman                 # API Development Tool
+# brew install rectangle               # Move & Resize & Grap Windows on MacOS
+# brew install keybase                 # Messages & Chats Encryption
+# brew install spotify                 # Music Platform
+# brew install vlc                     # Media Player
+# brew install alfred                  # Alfred Productivity
+# brew install caffeine                # Prevents Mac Sleeping
 
 
 # Git & Friends
