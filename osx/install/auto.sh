@@ -41,14 +41,14 @@ mkdir -p ${UTL_DIR}
 mkdir -p ${CFG_DIR}
 mkdir -p ${VIR_ENV}
 
-# Required Scripts & Configurations
-#######################################
+# # Required Scripts & Configurations
+# #######################################
 cp ../bin/* ${BIN_DIR}
 cp ../git/.gitconfig ${HOME}
-cp ../home/.zshrc ${HOME}
 cp ../home/.npmrc ${HOME}
 cp ../home/zsh-* ${ZSH_DIR}
-cp ../py/venv/.pypirc ${HOME}
+cp ../py/.pypirc ${HOME}
+
 
 # Iterm & Friends
 #######################################
@@ -56,17 +56,18 @@ brew install iterm2                  # Terminal (Enhanced)
 ITERM_THEME_MT="${GITHUB}/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 wget -q ${ITERM_THEME_MT} -O ${CFG_DIR}/material-design-colors.itermcolors
 
+
 # Zsh & Friends
 #######################################
 OH_MY_ZSH="${GITHUB}/ohmyzsh/ohmyzsh/master/tools/install.sh"
 curl -fsSL ${OH_MY_ZSH} | bash
 
+
 # Core
 #######################################
 brew install make                    # Make - Compile
-brew install travis                  # Continous Integration (CI)
 
-# Extra
+# Extra (enable as per your needs)
 #######################################
 # brew install visual-studio-code      # Visual Studio Code (IDE)
 # brew install google-chrome           # Google Chrome (Browser)
