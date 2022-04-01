@@ -7,3 +7,5 @@ alias djtst="export DEPLOYMENT_FLAVOR='TEST';"
 
 alias pg_start="pg_ctl -D ${BREW_DIR}/var/postgres start"
 alias pg_stop="pg_ctl -D ${BREW_DIR}/var/postgres stop"
+
+alias node_arch="node -e 'console.log(process.arch)'"
