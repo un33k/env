@@ -168,9 +168,14 @@ install_postgress() {
 #######################################
 finalize_install() {
     echo "finalalilzing installs."
+    # populate .zprofile that runs at login and once
+    echo "export PATH=${BREW_DIR}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" >> ${HOME}/.zprofile
+    echo "export ZSH_DISABLE_COMPFIX=true" >> ${HOME}/.zprofile # disable compfix issues
     echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
-    echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zshrc
     cat ../home/enable >> ${HOME}/.zprofile
+
+    # populate .zshrc that runs after each terminal opens
+    echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zshrc
     cat ../home/enable >> ${HOME}/.zshrc
 }
 
