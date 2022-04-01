@@ -168,8 +168,9 @@ install_postgress() {
 #######################################
 finalize_install() {
     echo "finalalilzing installs."
-    cat ../home/enable >> ${HOME}/.zprofile
     echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
+    echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zshrc
+    cat ../home/enable >> ${HOME}/.zprofile
     cat ../home/enable >> ${HOME}/.zshrc
 }
 
