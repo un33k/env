@@ -161,6 +161,12 @@ install_postgress() {
     brew services start postgresql
 }
 
+# Cocoapods & Friends (required for react native development)
+#######################################
+install_cocoapods() {
+    brew install cocoapods
+}
+
 # Restore scripts
 # .zshrc runs after each terminal opens
 # .zprofile runs on each user login once
@@ -201,5 +207,6 @@ clean_up() {
 # install_python
 # install_image_libs
 # install_postgress
+# install_cocoapods
 # finalize_install
 # clean_up
