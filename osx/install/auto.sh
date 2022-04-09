@@ -37,7 +37,7 @@ VIR_ENV="${HOME}/Sandbox/.venv"             # Virtual env directory
 
 # Required Directories
 #######################################
-create_dirs() {
+function create_dirs() {
     mkdir -p ${BIN_DIR}                     # bin directory for personal executables and scripts
     mkdir -p ${ZSH_DIR}                     # zsh related directory
     mkdir -p ${UTL_DIR}                     # utility directory
@@ -47,7 +47,7 @@ create_dirs() {
 
 # Required Scripts & Configurations
 #######################################
-hydrate_home_dir() {
+function hydrate_home_dir() {
     echo "Hydrating home directory."
     cp ../bin/* ${BIN_DIR}
     cp ../git/.gitconfig ${HOME}
@@ -58,7 +58,7 @@ hydrate_home_dir() {
 
 # Brew & Friends
 #######################################
-install_brew() {
+function install_brew() {
     echo "Installing brew."
     curl -fsSL ${HOME_BREW} | bash
     brew doctor                             # Brew Doctor
@@ -68,14 +68,14 @@ install_brew() {
 
 # Build
 #######################################
-install_build() {
+function install_build() {
     echo "Installing build tools."
     brew install make                       # Make - Compile
 }
 
 # Extra
 #######################################
-install_extra_apps() {
+function install_extra_apps() {
     echo "Installing apps."
     brew install visual-studio-code         # Visual Studio Code (IDE)
     brew install google-chrome              # Google Chrome (Browser)
@@ -90,7 +90,7 @@ install_extra_apps() {
 
 # Iterm & Friends
 #######################################
-install_iterm() {
+function install_iterm() {
     echo "Installing iterm."
     brew install iterm2                     # Terminal (Enhanced)
     wget -q ${ITERM_THEME_MT} -O ${CFG_DIR}/material-design-colors.itermcolors
@@ -98,14 +98,14 @@ install_iterm() {
 
 # Zsh & Friends
 #######################################
-install_zsh() {
+function install_zsh() {
     echo "Installing zShell."
     curl -fsSL ${OH_MY_ZSH} | bash          # Oh My zShell
 }
 
 # Git & Friends
 #######################################
-install_git() {
+function install_git() {
     echo "Installing git."
     brew install git                        # Git Distributed Source Control
     brew install git-gui                    # Git Gui - Gitk
@@ -114,7 +114,7 @@ install_git() {
 
 # NodeJs & Friends
 #######################################
-install_node() {
+function install_node() {
     echo "Installing node."
     brew install node                       # Node JS Runtime Env
     brew install yarn                       # Node Package Manager
@@ -123,7 +123,7 @@ install_node() {
 
 # Python & Friends
 #######################################
-install_python() {
+function install_python() {
     echo "Installing python."
     export PIP_REQUIRE_VIRTUALENV=''
     brew install python3                    # Python 3+
@@ -135,7 +135,7 @@ install_python() {
 
 # ImageLibs & Friends (required for pillow)
 #######################################
-install_image_libs() {
+function install_image_libs() {
     echo "Installing libs."
     brew install libjpeg
     brew install libtiff
@@ -144,14 +144,14 @@ install_image_libs() {
 
 # MemCache & Friends
 #######################################
-install_libmemcached() {
+function install_libmemcached() {
     echo "Installing memcached."
     brew install libmemcached
 }
 
 # Postgres & Friends
 #######################################
-install_postgress() {
+function install_postgress() {
     echo "Installing postgres."
     brew install postgres                   # Postgresql (Relational Database)
     brew install postgis                    # Postgresql GIS extension
@@ -163,8 +163,18 @@ install_postgress() {
 
 # Cocoapods & Friends (required for react native development)
 #######################################
-install_cocoapods() {
+function install_cocoapods() {
     brew install cocoapods
+}
+
+# Flutter & Friends (required for flutterdevelopment)
+#######################################
+function install_flutter() {
+    brew install --cask android-studio
+    brew install android-commandlinetools
+    brew install --cask android-ndk
+    brew install --cask flutter
+    echo "export PATH=/opt/homebrew/bin:$PATH" >> ${HOME}/.zprofile
 }
 
 # Restore scripts
@@ -172,7 +182,7 @@ install_cocoapods() {
 # .zprofile runs on each user login once
 # .zshrc is rewitten by this scripts & ohmyzsh
 #######################################
-finalize_install() {
+function finalize_install() {
     echo "finalalilzing installs."
     # populate .zprofile that runs at login and once
     echo "export PATH=${BREW_DIR}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" >> ${HOME}/.zprofile
@@ -187,7 +197,7 @@ finalize_install() {
 
 # Clean ups
 #######################################
-clean_up() {
+function clean_up() {
     echo "Clean up."
     brew cleanup
 }
@@ -208,5 +218,6 @@ clean_up() {
 # install_image_libs
 # install_postgress
 # install_cocoapods
+# install_flutter
 # finalize_install
 # clean_up
