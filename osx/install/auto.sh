@@ -174,7 +174,6 @@ function install_flutter() {
     brew install android-commandlinetools
     brew install --cask android-ndk
     brew install --cask flutter
-    echo "export PATH=/opt/homebrew/bin:$PATH" >> ${HOME}/.zprofile
 }
 
 # Restore scripts
