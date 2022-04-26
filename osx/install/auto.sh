@@ -184,7 +184,7 @@ function install_flutter() {
 function finalize_install() {
     echo "finalalilzing installs."
     # populate .zprofile that runs at login and once
-    echo "export PATH=${BREW_DIR}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" >> ${HOME}/.zprofile
+    echo "export PATH=${BREW_DIR}/sbin:${BREW_DIR}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" >> ${HOME}/.zprofile
     echo "export ZSH_DISABLE_COMPFIX=true" >> ${HOME}/.zprofile # disable compfix issues
     echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
     cat ../home/enable >> ${HOME}/.zprofile
