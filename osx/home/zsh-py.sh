@@ -1,7 +1,12 @@
 # Python configuration
 
 # Set python 3 as default for my user
-export PATH="${BREW_DIR}/Cellar/python@3.9/3.9.4/libexec/bin:/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/Cellar/python@3.10/3.10.8/libexec/bin:/usr/local/sbin:$PATH"
+
+############# sys pip systemwide - (e.g. syspip install <package_name>)
+syspip(){
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 ############ Python, VirtualEnv & VirtualEnvWrapper ##########
 PY3="${BREW_DIR}/bin/python3"
