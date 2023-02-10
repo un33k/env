@@ -82,6 +82,7 @@ function install_extra_apps() {
     brew install --cask brave-browser       # Brave (Browser)
     brew install --cask firefox             # Firefox (Browser)
     brew install --cask docker              # Container Platform
+    brew install --cast docker-compose      # Docker Compose
     brew install --cask postman             # API Development Tool
     brew install --cask vlc                 # Media Player
     brew install --cask alfred              # Alfred Productivity
