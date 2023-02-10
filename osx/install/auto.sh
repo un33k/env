@@ -179,6 +179,7 @@ function install_cocoapods() {
 #######################################
 function install_flutter() {
     brew install --cask android-studio      # Android Studio
+    brew install --cask temurin             # Java JDK
     brew install --cask android-commandlinetools # Android Command Line Tools
     brew install --cask android-ndk         # Android NDK
     brew install --cask flutter             # Flutter SDK
@@ -197,7 +198,7 @@ function finalize_install() {
     echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zprofile
     cat ../home/enable >> ${HOME}/.zprofile
 
-    # populate .zshrc that runs after each terminal opens
+    # populate .zshrc that runs on/after each terminal opens
     echo "export BREW_DIR=${BREW_DIR}" >> ${HOME}/.zshrc
     cat ../home/enable >> ${HOME}/.zshrc
 }
