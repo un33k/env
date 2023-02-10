@@ -77,22 +77,29 @@ function install_build() {
 #######################################
 function install_extra_apps() {
     echo "Installing apps."
-    brew install visual-studio-code         # Visual Studio Code (IDE)
-    brew install google-chrome              # Google Chrome (Browser)
-    brew install brave-browser              # Brave (Browser)
-    brew install firefox                    # Firefox (Browser)
-    brew install docker                     # Container Platform
-    brew install postman                    # API Development Tool
-    brew install vlc                        # Media Player
-    brew install alfred                     # Alfred Productivity
-    brew install caffeine                   # Prevents Mac Sleeping
+    brew install --cask visual-studio-code  # Visual Studio Code (IDE)
+    brew install --cask google-chrome       # Google Chrome (Browser)
+    brew install --cask brave-browser       # Brave (Browser)
+    brew install --cask firefox             # Firefox (Browser)
+    brew install --cask docker              # Container Platform
+    brew install --cask postman             # API Development Tool
+    brew install --cask vlc                 # Media Player
+    brew install --cask alfred              # Alfred Productivity
+    brew install --cask caffeine            # Prevents Mac Sleeping
+}
+
+# Virtual Audio Drivers
+#######################################
+function install_virtual_audio_drivers() {
+    brew install --cask vb-cable            # VB-Cable Virtual Audio Device
+    brew install --cask blackhole-2ch       # Blackhole Virtual Audio Device
 }
 
 # Iterm & Friends
 #######################################
 function install_iterm() {
     echo "Installing iterm."
-    brew install iterm2                     # Terminal (Enhanced)
+    brew install --cask iterm2              # Terminal (Enhanced)
     wget -q ${ITERM_THEME_MT} -O ${CFG_DIR}/material-design-colors.itermcolors
 }
 
@@ -170,10 +177,10 @@ function install_cocoapods() {
 # Flutter & Friends (required for flutterdevelopment)
 #######################################
 function install_flutter() {
-    brew install --cask android-studio
-    brew install android-commandlinetools
-    brew install --cask android-ndk
-    brew install --cask flutter
+    brew install --cask android-studio      # Android Studio
+    brew install --cask android-commandlinetools # Android Command Line Tools
+    brew install --cask android-ndk         # Android NDK
+    brew install --cask flutter             # Flutter SDK
 }
 
 # Restore scripts
@@ -208,6 +215,7 @@ function clean_up() {
 # install_brew
 # install_build
 # install_extra_apps
+# install_virtual_audio_drivers
 # install_iterm
 # install_zsh
 # install_git
